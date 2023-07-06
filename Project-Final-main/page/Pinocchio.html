@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&family=Kotta+One&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <style>
+        @import '../css/style.css';
+        @import '../css/restaurant.css';
+        @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+    </style>
+    <script>
+        let commentAPI='https://script.google.com/macros/s/AKfycbxIs-_7YkgbcczwhH52jMxLfE_KcyIvNGX896HWjmk6KKuUPWqcZEJypGHbzLANSTEWxA/exec'
+        function goLoging(){
+            window.open('../form.html','_parent')
+        }
+    </script>
+</head>
+
+<body>
+    <label id="for-back"></label>
+    <div class="header-bar">
+        <div>
+            <a href="../index.html" class="web-logo">
+                <img src="../image/logo.png" class="logo-bar">
+                <div style="transform:translateX(2.35rem);text-align: left;" class="logo-title">
+                    <label class="label-logo">Phnom Penh Restaurant</label><br>
+                    <label class="label-logo-description" style="font-size:12px;font-family: Inconsolata; cursor: pointer;">find your favorite place to enjoy your
+                        meal!</label>
+                </div>
+            </a>
+        </div>
+        <div class="body-search">
+            <div class="form">
+                <button type="submit" id="button-search"><img src="../image/search.png" alt="" width="20px"></button>
+                <input type="search" name="" id="search-bar" placeholder="Search for any Restaurant">
+                <select name="" id="filter">
+                    <option value="" class="f1">Filter</option>
+                    <option value="" class="f">Popular</option>
+                    <option value="" class="f">Breakfast Served</option>
+                    <option value="" class="f">Lunch Served</option>
+                    <option value="" class="f">Dinner Served</option>
+                    <option value="" class="f">Fast Food</option>
+                    <option value="" class="f">Chinese & Japenese</option>
+                    <option value="" class="f">Nearby</option>
+                    <option value="" class="f">Bars and Rooftop</option>
+                    <option value="" class="f">Buffet</option>
+                </select>
+                <script src="../js/actionSellectorBar.js"></script>
+            </div>
+            <!-- <div class="list-search">
+                <a href="#"><li>Zhan Liang Chinese</li></a>
+                <a href="#"><li>YiSang</li></a>
+                <a href="#"><li>Terraza</li></a>
+                <a href="#"><li>Sundown Social Club</li></a>
+                <a href="#"><li>Red Bar</li></a>
+                <a href="#"><li>One More</li></a>
+                <a href="#"><li>Metro Azura</li></a>
+                <a href="#"><li>Ming Palace</li></a>
+            </div>             -->
+
+
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="../map.html" class="map">Map</a></li>
+                <li><a href="../aboutUs.html">About US</a></li>
+                <li id="forLogin"></li>
+                <div onclick="dropDown()" class="toggle-menu">
+                    <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                    <div class="drop-down-content">
+                        <a href="../map.html" class="map">Map</a>
+                        <a href="../aboutUs.html">About US</a>
+                        <a id="forLogin" href="#">Account</a>
+                    </div>
+                </div>
+                <script>
+                    function dropDown(){
+                        let dropdown = document.querySelector(".drop-down-content")
+                        if(dropdown.classList.contains("clicked") === false){
+                            document.querySelector(".drop-down-content").style.display = "block"
+                            dropdown.classList.add("clicked")
+                        }
+                        else{
+                            document.querySelector(".drop-down-content").style.display = "none"
+                            dropdown.classList.remove("clicked")
+                        }
+
+                    }
+                </script>
+            </ul>
+            <!-- <div id="sms">
+                <img src="image/letter.png" alt="" id="letter"><div id="info"><p>Name: Tet Davann</p><p>Email: davanncr@gmail.com</p><a href="">Logout</a></div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Restaurant content -->
+
+    <div id="top-menu">
+        <div class="content-left">
+            <h2>Pinocchio</h2>
+            <ul>
+                <li>Tags:</li>
+                <li><a href="#"><div>Popular</div></a></li>
+                <li><a href="#"><div>Fast Food</div></a></li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li><button><a href="#menu">Menu</a></button></li>
+                <li><a href="#" class="content-sign content-sign1"><iconify-icon icon="mdi:lead-pencil" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Review</a></li>
+                <li><a href="#" class="content-sign content-sign2"><iconify-icon class="favorite-icon" icon="mdi:cards-heart-outline" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Favorite</a></li>
+                <li><a href="#" class="content-sign content-sign3"><iconify-icon icon="mdi:share" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Share</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="show-image">
+        <div class="images">
+            <div class="image-1">
+                <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/319675316_2238938822946011_5629640348663764059_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=x2ThmW55hJMAX-Q69aA&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfDdCmEUvCAguxIh8BpVbmmr6wnjewUBL7PYf_GS0KNECw&oe=63A3D665" alt="">
+            </div>
+            <div class="image-2">
+                <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/318331079_1823007238070899_8458608374216062318_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2g6FQna4o-IAX-u4uFS&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfA_yeEvoCttRGmnHA6H8p7Uk0R920wUy6YkSRpywtkbbA&oe=63A38FB5" alt="">
+                <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/317094913_1823007181404238_3514420390769432306_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=rbGMqeDyD_MAX-9DTh1&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAkwS5wDXS9TXgHUyX84PfNWcNNlOcD5RGFb-98jDc4sw&oe=63A404AE" alt="" style="margin-top: -3.8px;">
+            </div>
+        </div>
+        <div class="box">
+            <!-- <img src="../image/recom-4.jpg" alt=""> -->
+            <div class="circle">
+                    <iconify-icon icon="material-symbols:fastfood-rounded"></iconify-icon>
+                    <div class="image" id="drink1"><img src="image/drink1.png"></div>
+                    <div class="image" id="food1"><img src="image/food1.png"></div>
+                    <div class="image" id="food2"><img src="image/food2.png"></div>
+                    <div class="image" id="food3"><img src="image/food3.png"></div>
+                    <div class="image" id="drink2"><img src="image/drink2.png"></div>
+                    <div class="image" id="food4"><img src="image/food4.png"></div>
+                    <div class="image" id="food5"><img src="image/food5.png"></div>
+            </div>
+        </div>
+    </div>
+    <!-- overview -->
+    <div class="overview">
+        <fieldset>
+            <legend>Overview</legend>
+            <div class="text">
+                Pinocchio Buffet is a Restaurant located at HWH2+G7C, Saint 287, Khan Tuol Kouk, Phnom Penh, KH. The business is listed under restaurant category.inocchio Buffet particularly serves kinds of seafood such as huge crabs, fresh lobster, and blood clams. 
+            </div><br>
+            <div class="overview-mid-content">
+                <div id="menu">
+                    <div class="menu-title">Menu</div>
+                    <div class="menu-list"><img src="https://www.disneyfoodblog.com/wp-content/uploads/2012/06/Pinocchio-Menu.jpg" alt=""></div>
+                </div>
+                <div class="trending">
+                    <div class="trending-title">Trending Foods and Photos</div>
+                    <div class="trending-photos">
+                        <div class="trending-items trending-content1">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/317359937_1820377571667199_2736363541975339776_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=bD9VM1rbpIAAX9DofJa&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfD6bi8AZcgN_3If-_RogfNPu8fJdvtQfLFyrH8S65IrZA&oe=63A36397">
+                        </div>
+                        <div class="trending-items trending-content2">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/318330835_1820377555000534_5530097474478161672_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_aid=0&_nc_ohc=jMju4oVhtdsAX8OYXX6&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAcL3Hz6GHLjoc5Mw9s1pSKMbF4D6iDvRYhLxF1LMYl6Q&oe=63A2E62F">
+                        </div>
+                        <div class="trending-items trending-content3">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/318440529_1820377495000540_6608663140735924942_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_aid=0&_nc_ohc=UyeCseYgP5AAX_kXxNr&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBBRVrjt-jRo-MWhVmthG-5aO_wLHOzZUcGkyPYRcTDSg&oe=63A43757">
+                        </div>
+                        <div class="trending-items trending-content4">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/318958843_1819633268408296_2824671780779658016_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jnag40-cXmYAX-JRJGH&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAmM6suEF4a8HtftrRBkImAy05mmekl-JyfyCwveqs9xA&oe=63A46BEC">
+                        </div>
+                        <div class="trending-items trending-content5">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/318348013_1818677331837223_7007449349845090716_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Z0DAbJ61sxIAX_Jb30s&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAsawiafsbdq8epxu_YpxExgHXjx_vfuupEOxFnpa_guA&oe=63A2E668">
+                        </div>
+                        <div class="trending-items trending-content6">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/317086601_1820377518333871_9037727586035845402_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=p0CE60-t9N4AX8xllYs&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfB0XXh3nBT6jZF6-c6iSq-4bsRTlizfjB95m_DmDLumsQ&oe=63A3B54B">
+                        </div>
+                        <div class="trending-items trending-content7">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/319555231_675336467394606_9099190209066582135_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=c_f0iR8dz0wAX-qpGdK&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAzO_iKbBn3AMgQ9yhguUQD7gqqCmrkR33DE8hekORHCA&oe=63A4D68D">
+                        </div>
+                        <div class="trending-items trending-content8">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/317842599_1823007158070907_2184676270092745615_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=JgHWmNctkiEAX-qQuWc&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBk6QpMHa9cqjaJgkBcpxYidjpQvcf3bfuGN0KMDcIITw&oe=63A42A46">
+                        </div>
+                        <div class="trending-items trending-content9">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/319683729_1823007131404243_8098045844759340489_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=c1fYr_dNN2QAX8Fawbc&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBllGJmSu13whdfulxJe7SGW0dvev0VdEKIMsNYgLMWpw&oe=63A36624">
+                        </div>
+                        <div class="trending-items trending-content10">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/316955387_1820377681667188_737150199892690651_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=O2neSOMpOakAX--ErdR&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfChDzTkCDioryoFwv0mCd3R6MNH0e8tMbipRXFVYMeV6A&oe=63A41EC4">
+                        </div>
+                        <div class="trending-items trending-content11">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/319297723_1820377665000523_802502753011399674_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_aid=0&_nc_ohc=ZMqZiLhWhy4AX_s1pNJ&tn=KJVHp6ZjtyH8e_AW&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfC74ZsRJv25YWkcTdGRpLnPYV078_b1v7HM_DxgtMmTUw&oe=63A4BCDE">
+                        </div>
+                        <div class="trending-items trending-content12">
+                            <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/317731197_1820377648333858_4888815081831097172_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=865h3bWOPOwAX-FqChm&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfCMM6rcAsDX9hdUWgmwz6QEuEwZYbHlpVUZtwNpP5nl4g&oe=63A4A635">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-set">
+                <button>Reserve Now</button>
+                <label class="spacing">|</label>
+                <label  class="fa fa-map-marker" aria-hidden="true"></label>
+                <div class="location"><a id="location" href="#">Restaurant location,Restaurant location,Restaurant location</a></div>
+                <label class="spacing">|</label>
+                <label for="phone-number" class="fa fa-phone"></label>
+                <div><a id="phone-number" href="tel:0964526262">+855 964 526 262</a></div>
+                <label class="spacing">|</label>
+                <label for="website" id="globe"><img src="../image/globe.png" alt=""width=15vw class="globe-img"></label>
+                <div><a id="website" href="#">Website</a></div>
+                <label class="spacing">|</label>
+                <label class="res-detail">
+                    <label class="opening-time">
+                        <label class="fa fa-clock-o" aria-hidden="true"></label>
+                        <label>7:00am-8:00pm</label>
+                        <label class="fa fa-status"></label>
+                        <label class="open" aria-hidden="true">Open</label>
+                        <label class="close" aria-hidden="true">Close</label>
+                    </label>
+                    <label class="spacing">|</label>
+                    <label for="" class="price-range">
+                        <label class="fa fa-dollar"></label>
+                        <label>Price range:  $2 - $50</label>
+                    </label>
+                </label>
+            </div>
+        </fieldset>        
+    </div>
+    <!-- Review & Comment -->
+    <div class="underBody">
+        <div class="review">
+            <fieldset>
+                <legend>Review</legend>
+                <p style="font-weight: bolder;">Share your thought</p>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username" class="flabel1">Username&nbsp;</label><input type="text" name="name" id="username" required style="display: none;">
+                                <label for="email" class="flabel2">&nbsp;&nbsp;Email&nbsp;</label><input type="email" name="email" id="email" required style="display: none;"><br><br>
+                                <input type="text" name="currentdate" id="currentDate" style="display: none;">
+                            </th>
+                            <script src="js/display.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="review-section">
+                                <div>Your review:</div>
+                                <textarea name="comment" id="comment" cols="35" rows="7" placeholder="comment here" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Rate :</label><label id="ratingStar">
+                                    <input type="radio" name="star" id="st1" value="1" class="numStars" required>
+                                    <label class="fa fa-star" id="star1" for="st1" class="numStars"></label>
+                                    <input type="radio" name="star" id="st2" value="2" class="numStars" required>
+                                    <label class="fa fa-star" id="star2" for="st2" class="numStars"></label>
+                                    <input type="radio" name="star" id="st3" value="3" class="numStars" required>
+                                    <label class="fa fa-star" id="star3" for="st3" class="numStars"></label>
+                                    <input type="radio" name="star" id="st4" value="4" class="numStars" required>
+                                    <label class="fa fa-star" id="star4" for="st4" class="numStars"></label>
+                                    <input type="radio" name="star" id="st5" value="5" class="numStars" readonly>
+                                    <label class="fa fa-star" id="star5" for="st5" class="numStars"></label>
+                                </label>
+                                <p id="ratingRecomment">&nbsp;</p>
+                            </td>
+                        </tr>
+                    </table> 
+
+                    <button id="post" type="submit">Post</button><label id="eror" style="color:red;padding-left: 50px;"></label>            
+                </form>
+                <script src="js/sheetDB.js"></script>
+                <label style="font-weight: bold;">Reviews(<label id="numRecomment"></label>)</label>
+                <button id="refresh" style="background-color: white;border: none;margin-left: 80%;">
+                    <span class="fa fa-refresh" id="logoRefresh" style="font-size:18px"></span>
+                </button><br><br>
+                <div id="getPost">
+
+                </div>
+
+            </fieldset>
+        </div>
+        <!-- Similar Restaurant -->
+        <div class="menuRestaurant">
+            <label class="similar-res-title">Similar Restaurants</label>  
+            <div class="similarRestaurant">
+                    <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-1:00pm</span>                   
+                      </div>
+                  </div>
+      
+            </div>
+      </div>
+    </div>
+    <div class="orangebar"></div>
+    <div id="footer">
+        <div class="left">
+            <img src="../image/logo.png" alt="logo">
+            <h3>Follow us:</h3>
+            <div class="social-media">
+                <a href="#" class="fa fa-facebook-square" aria-hidden="true"></a>
+                <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter-square" aria-hidden="true"></a>
+                <a href="#"class="fa fa-telegram" aria-hidden="true"></a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="#" class="other">Privacy Policy</a>
+            <a href="#" class="other">Terms & Conditions </a>
+            <a href="#" class="other">Contact Us</a>
+            <a href="#" class="other">Feedback</a>            
+        </div>    
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="../js/windowScroll.js"></script>
+    <script src="../js/start.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="js/similarity.js"></script>
+</body>
+
+</html>

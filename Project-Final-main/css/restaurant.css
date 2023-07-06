@@ -1,0 +1,1020 @@
+html{
+    font-size: 16px;
+}
+body{
+    max-width: 80rem;
+}
+#top-menu{
+    transform: translateY(120px);
+    height: 4.6875rem;
+    background-color: #F8EDE1;
+    padding: 20px 50px;
+    display: flex;
+}
+#top-menu div{
+    display: inline-block;
+}
+.content-left{
+    margin-top: 5px;
+}
+.content-left ul{
+    padding: 0;
+    margin-top: -20px;
+}
+.content-left ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+.content-left ul li a{
+    font-size: 8px !important;
+    font-weight: normal !important;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.content-left ul li a div{
+    /* width: 50px; */
+    height: 10px;
+    padding: 0 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+.content-right{
+    margin-left: auto;
+    margin-top: 5px;
+    /* cursor: pointer; */
+}
+.content-right ul{
+    padding: 0;
+    cursor: pointer;
+}
+.content-right ul li{
+    list-style: none;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.content-right ul li a:hover{
+    font-weight: bold;
+}
+.content-right ul li a{
+    text-decoration: none;
+    color: black;
+}
+.content-right .content-sign:after{
+    content: "|";
+    margin-right: 10px;
+    margin-left: 15px;
+}
+.content-right ul li button{
+    width: 5rem;
+    height: 2.8125rem;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    background-color: #150037;
+    border: none;
+    border-radius: 1.25rem;
+    margin-right: 0.625rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.content-right ul li button a{
+    text-decoration: none;
+    color: white;
+}
+.content-right ul li button:hover{
+    background-color: rgba(1, 0, 55, 1);
+    transform: scale(1.15,1.15);
+}
+.show-image{
+    transform: translateY(120px);
+}
+.show-image{
+    display: flex;
+}
+.show-image .images{
+    display: flex;
+    width: 50%;
+    height: 21.25rem;
+}
+.show-image .images .image-1{
+    width: 50%;
+}
+.show-image .images .image-2{
+    width: 50%;
+}
+.show-image .images .image-1 img{
+    object-fit: cover;
+    width:100%;
+    height: 21.25rem;
+}
+
+.show-image .images .image-2 img{
+    object-fit: cover;
+    width:100%;
+    height: 10.625rem;
+}
+.show-image .box{ 
+    width:50%;
+    height: 21.25rem;
+    background-color: #150037;
+    /* background-color: #eae0d5; */
+    display: grid;
+    place-items:center !important;
+}
+.show-image .box .circle{
+    width: 18.75rem;
+    height: 18.75rem;
+    background-image: url("../css/../page/image/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    z-index: 3;
+}
+.show-image .box .circle iconify-icon{
+    opacity: 40%;
+    font-size: 60px;
+    color: white;
+    z-index: 2;
+    animation: 1s linear 0s 1 iconAnimation;
+    grid-column: 1;
+    grid-row: 1;
+}
+.box .circle .image{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 0, 0);
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+}
+.box .circle :nth-child(2){
+    transform: translate(20px,-160px);
+    animation: 1s linear 0s 1  drink1-decoration-animation;
+}
+.box .circle :nth-child(3){
+    transform: translate(100px,-70px);
+    animation: 1s linear 0s 1  food1-decoration-animation;
+}
+.box .circle :nth-child(4){
+    transform: translate(105px,65px);
+    animation: 1s linear 0s 1  food2-decoration-animation;
+}
+.box .circle :nth-child(5){
+    transform: translate(-30px,150px);
+    animation: 1s linear 0s 1  food3-decoration-animation;
+}
+.box .circle :nth-child(6){
+    transform: translate(-120px,55px);
+    animation: 1s linear 0s 1  drink2-decoration-animation;
+}
+.box .circle :nth-child(7){
+    transform: translate(-170px,-40px);
+    animation: 1s linear 0s 1  food4-decoration-animation;
+}
+.box .circle :nth-child(8){
+    transform: translate(-100px,-140px);
+    animation: 1s linear 0s 1  food5-decoration-animation;
+}
+
+#drink1 img{
+    width: 90px;
+}
+#food1 img{
+    width: 120px;
+}
+#food2 img{
+    width: 70px;
+}
+#food3 img{
+    width: 90px;
+}
+#drink2 img{
+    width: 50px;
+}
+#food4 img{
+    width: 90px;
+}
+#food5 img{
+    width: 90px;
+}
+.overview{
+    transform: translateY(160px);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.overview .text{
+    text-align: justify;
+    margin-top: 10px;
+}
+.overview fieldset{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 80rem;
+}
+.overview fieldset legend{
+    margin-left: 7%;
+    font-size: 20px;
+    color: orange;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.overview fieldset .overview-mid-content{
+    display: flex;
+    margin-bottom: 2.8rem;
+}
+.overview fieldset .overview-mid-content #menu{
+    width: 50%;
+}
+.overview fieldset .overview-mid-content #menu .menu-title{
+    margin-bottom: 0.64rem;
+    font-size: 18px;
+    color: orange;
+    font-weight: 500;
+    padding: 10px 0px;
+    text-align: center;
+}
+.overview fieldset .overview-mid-content #menu .menu-list{
+    width: 99%;
+    height: 19rem;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+.overview fieldset .overview-mid-content #menu .menu-list img{
+    width: 100%;
+    height: 19rem;
+    object-fit:contain;
+}
+.overview fieldset .overview-mid-content .trending{
+    margin-left: 1%;
+    width: 50%;
+}
+.overview fieldset .overview-mid-content .trending .trending-title{
+    margin-bottom: 0.64rem;
+    font-size: 18px;
+    color: orange;
+    font-weight: 500;
+    padding: 10px 0px;
+    text-align: center;
+}
+.overview fieldset .overview-mid-content .trending .trending-photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,11.5rem);
+    grid-auto-rows: 11.5rem;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    width: 100%;
+    height: 19rem;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+.overview fieldset .overview-mid-content .trending .trending-photos .trending-items{  
+    background-color: #f4f4f4;
+    transition:all 0.3s ease 0s;
+    cursor: pointer;
+}
+.overview fieldset .overview-mid-content .trending .trending-photos .trending-items img{
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    object-fit: cover;
+}
+.overview fieldset .overview-mid-content .trending .trending-photos .trending-items:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.overview fieldset button{
+    outline: 1px solid #00a700;
+    background-color: white;
+    border-radius: 10px;
+    border: 0;
+    padding: 7px;
+    font-size: 1vw;
+    margin-top: -8px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.overview fieldset button a{
+    text-decoration: none;
+    color: black;
+}
+.overview fieldset button:hover{
+    background-color: #00a700;
+    color: white;
+}
+.overview fieldset button:hover a{
+    color: white;
+}
+.overview fieldset .spacing{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.overview fieldset .fa{
+    font-size: 1.25vw;
+}
+.overview fieldset .bottom-set{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1vw;
+}
+.overview fieldset .bottom-set .location{
+    width: 20vw;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.overview .bottom-set{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.overview .bottom-set div a{
+    text-decoration: none;
+    color:black;
+}
+.opening-time .open{
+    color: green;
+    font-weight:bold;
+}
+.opening-time .close{
+    color: red;
+    font-weight: bold;
+}
+.underBody{
+    transform: translateY(200px);
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.underBody .review{
+    width: 50%;
+}
+.underBody .review fieldset::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+.underBody .review fieldset{
+    /* width: 80%; */
+    height: 140vh;
+    overflow: scroll;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.underBody .review fieldset legend{
+    margin-left: 7%;
+    font-size: 20px;
+    color: orange;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.underBody .menuRestaurant{
+    width: 50%;
+    padding-left: 4%;
+}
+.underBody .menuRestaurant .similar-res-title{
+    font-size: 20px;
+    color: orange;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.underBody .menuRestaurant .similarRestaurant{
+    /* display: flex;
+    flex-direction: column; */
+    display:grid;
+    grid-template-columns: repeat(2,18rem);
+    gap: 1.25rem;
+    padding-left: 15px;
+    height: 140vh;
+    overflow-y: auto;
+}
+.underBody .menuRestaurant .similarRestaurant .menu{
+    width:95%;
+    height: 250px;
+    margin-top: 20px;
+    transition: all 0.3s ease 0s;
+}
+.underBody .menuRestaurant .similarRestaurant .menu img{
+    width: 100%;
+    height: 190px;
+    transition: 0.3s;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.underBody .menuRestaurant .similarRestaurant .menu:hover{
+    background-color: rgb(0, 0, 0);
+    outline: 3px solid rgb(0, 0, 0,0.7);
+    border-radius: 0.1rem;
+    box-shadow: 1px 1px 10px black;
+    color: white;
+    position: relative;
+    transform: scale(1.05);
+}
+.underBody .menuRestaurant .similarRestaurant .menu:hover .name-restaurant{
+    color: white;
+}
+
+.underBody .menuRestaurant .similarRestaurant .menu:hover img{
+    transform: scale(0.9);
+    border-radius: 0.1rem;
+}
+.underBody .menuRestaurant .similarRestaurant .menu:hover .res-title-and-status::before{
+    content: var(--my-content);
+    position: absolute;
+    top: 50%;
+    width: 16.3rem;
+    height: 2.5rem;
+    background-color: rgb(0, 0, 0,0.5);
+    backdrop-filter: blur(3px);
+    font-size: 0.75rem;
+    padding-top: 1.25rem;
+    animation: 0.2s ease-in 0s 1 running widthLefttoRight;
+}
+.underBody .menuRestaurant .similarRestaurant .menu:hover .span-popular{
+      display: none;  
+}
+
+.underBody .menuRestaurant .similarRestaurant .menu .res-title-and-status{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 0.2rem;
+}
+.underBody .menuRestaurant .similarRestaurant .menu .res-title-and-status a{
+    text-decoration: none;
+    color: black;
+}
+.underBody .menuRestaurant .similarRestaurant .menu .res-title-and-status .name-restaurant{
+    font-size: 1.1rem;
+    margin-top: -0.3rem;
+    width: 14rem;
+    height: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* #email{
+    width: 200px;
+    height: 20px;
+    outline: none;
+    display: none !important;
+}
+#username{
+    height: 20px;
+    outline: none;
+}
+.flabel1{
+    display: none !important;
+}
+.flabel2{
+    display: none !important;
+}*/
+.review-section{ 
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.review-section div{
+    display: grid;
+    place-items: center;
+    white-space: nowrap;
+}
+#comment{
+    outline: none;
+    resize: none;
+    width: 13em !important;
+    height: 5em !important;
+}
+#comment::placeholder{
+    font-size: 20px;
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+    transform: translateY(90%);
+}
+#post{
+    padding: 5px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    color:black;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+#post:hover{
+    background-color: black;
+    color:white;
+}
+.commented .topcomment{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.commented .topcomment label:not(:first-child){
+   padding-left: 10px;
+   font-size: 12px;
+}
+.commented {
+    width: 100%;
+}
+.commented .bottoncomment{
+    padding-left: 9%;
+    width: 82%;
+    word-break: break-all;
+    margin-bottom: 20px;
+}
+.name{
+    width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#ratingStar label{
+    color:rgb(255, 255, 255);
+    text-shadow:0px 0px 4px orange;
+    padding-left: 3px;
+    font-size: 19px;
+}
+#ratingStar input{
+   display: none;
+}
+#ratingStar label:hover{
+    color:orange;
+}
+
+#ratingStar input:checked ~ label:not(::after) {
+    color: orange;
+}
+#logoRefresh{
+    transition: all 2s;
+}
+.checked{
+    color:orange;
+}
+.recomnot{
+    width: 140px;
+    padding-left: 30px;
+    
+}
+#footer{
+    transform: translate(4rem,7rem);
+}
+.orangebar{
+    transform: translateY(15rem);
+    background-color: #F8EDE1;
+    width: 100%;
+    height: 10rem;
+}
+#refresh{
+    display: none;
+}
+@media only screen and (min-width:768px) and (max-width:1000px) {
+    .overview fieldset .overview-mid-content .trending .trending-photos{
+        grid-template-columns: repeat(auto-fill,10.5rem);
+        grid-auto-rows: 10.5rem;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        width: 100%;
+        height: 18rem;
+    }
+    .overview fieldset .overview-mid-content .trending .trending-photos .trending-items img{
+        width: 10.5rem;
+        height: 10.5rem;
+        object-fit: cover !important;
+    }
+    .overview fieldset .overview-mid-content .menu .menu-list{
+        width: 99%;
+        height: 18rem;
+        background-color: #f4f4f4;
+    }
+    .overview fieldset .overview-mid-content .menu .menu-list img{
+        width: 100%;
+        height: 18rem;
+        object-fit: cover;
+    }
+    .globe-img{
+        width: 1.3vw;
+    }
+    .overview fieldset .fa{
+        margin: 0 0.5vw;
+    }
+    .overview fieldset button{
+        border-radius: 0.85rem;
+        font-size: 0.5rem;
+        width: 4.5rem;
+        height: 2.25rem;
+        margin-top: -0.75rem;
+    }
+    .overview fieldset .bottom-set{
+        font-size: 1.25vw;
+    }
+    .location{
+        width: 15vw;
+        height: 2vh;
+        display: none;
+    }
+    .overview fieldset .bottom-set .fa-map-marker::after{
+        content: "Location";
+        padding-left: 0.2rem;
+        font-family: "Inter",sans-serif;
+    }
+    .underBody .menuRestaurant {
+        margin-left: 7%;
+    }
+    .underBody .menuRestaurant .similarRestaurant{
+        display:grid;
+        grid-template-columns: repeat(auto-fill,18rem);
+        gap: 1.25rem;
+        padding-left: 15px;
+        height: 140vh;
+        overflow-y: auto;
+    }
+}
+@media only screen and (max-width:768px) {
+    #top-menu{
+        flex-direction: column;
+        padding: 0.2rem 20px ;
+        height: 8rem;
+    }
+    .content-right{
+        margin-top: -1.5rem;
+        margin-left: 0;
+    }
+    .content-right ul li button{
+        width: 4.2rem;
+        height: 2.0125rem;
+        border-radius: 0.75rem;
+    }
+    .content-right .content-sign1{
+        display: none;
+    }
+    .content-right .content-sign:after{
+        content: "";
+    }
+    .show-image{
+        flex-direction: column;
+    }
+    .show-image .images{
+        width: 100%;
+    }
+    .show-image .box{
+        width: 100%;
+        order: -1;
+    }
+    .overview fieldset .overview-mid-content{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .overview fieldset .overview-mid-content .menu{
+        width: 100%;
+    }
+    .overview fieldset .overview-mid-content .menu .menu-list{
+        width: 80vw;
+    }
+    .overview fieldset .overview-mid-content .trending{
+        width: 80vw;
+    }
+    .overview fieldset .overview-mid-content .menu .menu-title{
+        text-align: start;
+        padding-left: 0;
+    }
+    .overview fieldset .overview-mid-content .trending .trending-title{
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .overview fieldset .overview-mid-content .trending .trending-photos{
+        grid-template-columns: repeat(12,8.5rem);
+        grid-auto-rows: 8.5rem;
+        height: 10rem;
+        justify-content: flex-start;   
+    }
+    .overview fieldset .overview-mid-content .trending .trending-photos .trending-items img{
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+    .overview fieldset button{
+        border-radius: 0.85rem;
+        font-size: 0.5rem;
+        width: 4.5rem;
+        height: 2.25rem;
+    }
+    .overview fieldset .spacing{
+        display: none;
+    }
+    .overview fieldset .fa{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .overview .bottom-set label{
+        margin-top: -0.75rem;
+    }
+    .overview .bottom-set .fa-map-marker::after{
+        content: "Location";
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        font-family: "Inter",sans-serif;
+    }
+    .overview .bottom-set .fa-phone::after{
+        content: "Call";
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        font-family: "Inter",sans-serif;
+    }
+    .overview .bottom-set .res-detail{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .overview .bottom-set .res-detail .opening-time,.overview .bottom-set .res-detail .price-range{
+        font-size: 0.5rem;
+    }
+    .overview .bottom-set .res-detail .opening-time label:nth-child(2),.overview .bottom-set .res-detail .price-range label:nth-child(2){
+        padding: 0 0.2rem;
+    }
+    .overview .bottom-set .res-detail .opening-time .fa-clock-o,.overview .bottom-set .res-detail .price-range .fa-dollar{
+        font-size: 1rem;
+    }
+    .overview .bottom-set div{
+        display: none;
+    }
+    .globe-img{
+        width: 2rem;
+        margin: 0 0.5vw;
+        cursor: pointer;
+    }
+    #globe::after{
+        content: "Website";
+        font-size: 0.5rem;
+        display: block;
+        text-align: center;
+        font-family: "Inter",sans-serif;
+    }
+    .underBody{
+        flex-direction: column;
+    }
+    .underBody .review fieldset{
+        width: 100% !important;
+    }
+    .underBody .menuRestaurant{
+        margin-top: 1rem;
+    }
+    .underBody .menuRestaurant .similar-res-title{
+        padding-left: 0;
+    }
+    .underBody .menuRestaurant .similarRestaurant{
+        height: 18rem;
+        overflow-y: auto;
+        background-color: rgb(255, 255, 255);
+        display:grid;
+        grid-template-columns: repeat(8,18rem);
+        gap: 1.25rem;
+        padding-left: 15px;
+    }
+    .underBody .menuRestaurant .similarRestaurant .menu{
+        width:90%;
+        height: 12rem;
+        margin-top: 20px;
+    }
+    .underBody .menuRestaurant .similarRestaurant .menu img{
+        width: 100%;
+        height: 10rem;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    .underBody .menuRestaurant .similarRestaurant .menu .name-restaurant{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@keyframes iconAnimation {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 70%;
+    }
+    100%{
+        opacity: 40%;
+    }
+    
+}
+@keyframes drink1-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(20px,-160px);
+    }
+}
+@keyframes food1-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(100px,-70px);
+    }
+}
+@keyframes food2-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(105px,65px);
+    }
+}
+@keyframes food3-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(-30px,150px);
+    }
+}
+@keyframes drink2-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(-120px,55px);
+    }
+}
+@keyframes food4-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(-170px,-40px);
+    }
+}
+@keyframes food5-decoration-animation {
+    0% {
+        transform: translate(0,0);
+        opacity: 0%;
+    }
+    25%{
+        opacity: 30%;
+    }
+    50%{
+        opacity: 55%;
+    }
+    75%{
+        opacity: 80%;
+    }
+    100% {
+        transform: translate(-80px,-100px)9
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+    object-fit: cover;
+    max-width: 700px;
+  }
+  
+  .modal-content{  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close_cross {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close_cross:hover,
+  .close_cross:focus {
+    color: rgb(255, 132, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }

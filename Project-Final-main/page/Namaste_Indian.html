@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&family=Kotta+One&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <style>
+        @import '../css/style.css';
+        @import '../css/restaurant.css';
+        @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+    </style>
+    <script>
+        let commentAPI='https://script.google.com/macros/s/AKfycbxD9-3Eae68me2TWj9G1E2JAAu0QRj8OuowQ7CFW6s8fooKiRbQx2HioAmLnnALpbAjAQ/exec'
+        function goLoging(){
+            window.open('../form.html','_parent')
+        }
+    </script>
+</head>
+
+<body>
+    <label id="for-back"></label>
+    <div class="header-bar">
+        <div>
+            <a href="../index.html" class="web-logo">
+                <img src="../image/logo.png" class="logo-bar">
+                <div style="transform:translateX(2.35rem);text-align: left;" class="logo-title">
+                    <label class="label-logo">Phnom Penh Restaurant</label><br>
+                    <label class="label-logo-description" style="font-size:12px;font-family: Inconsolata; cursor: pointer;">find your favorite place to enjoy your
+                        meal!</label>
+                </div>
+            </a>
+        </div>
+        <div class="body-search">
+            <div class="form">
+                <button type="submit" id="button-search"><img src="../image/search.png" alt="" width="20px"></button>
+                <input type="search" name="" id="search-bar" placeholder="Search for any Restaurant">
+                <select name="" id="filter">
+                    <option value="" class="f1">Filter</option>
+                    <option value="" class="f">Popular</option>
+                    <option value="" class="f">Breakfast Served</option>
+                    <option value="" class="f">Lunch Served</option>
+                    <option value="" class="f">Dinner Served</option>
+                    <option value="" class="f">Fast Food</option>
+                    <option value="" class="f">Chinese & Japenese</option>
+                    <option value="" class="f">Nearby</option>
+                    <option value="" class="f">Bars and Rooftop</option>
+                    <option value="" class="f">Buffet</option>
+                </select>
+                <script src="../js/actionSellectorBar.js"></script>
+            </div>
+            <!-- <div class="list-search">
+                <a href="#"><li>Zhan Liang Chinese</li></a>
+                <a href="#"><li>YiSang</li></a>
+                <a href="#"><li>Terraza</li></a>
+                <a href="#"><li>Sundown Social Club</li></a>
+                <a href="#"><li>Red Bar</li></a>
+                <a href="#"><li>One More</li></a>
+                <a href="#"><li>Metro Azura</li></a>
+                <a href="#"><li>Ming Palace</li></a>
+            </div>             -->
+
+
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="../map.html" class="map">Map</a></li>
+                <li><a href="../aboutUs.html">About US</a></li>
+                <li id="forLogin"></li>
+                <div onclick="dropDown()" class="toggle-menu">
+                    <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                    <div class="drop-down-content">
+                        <a href="../map.html" class="map">Map</a>
+                        <a href="../aboutUs.html">About US</a>
+                        <a id="forLogin" href="#">Account</a>
+                    </div>
+                </div>
+                <script>
+                    function dropDown(){
+                        let dropdown = document.querySelector(".drop-down-content")
+                        if(dropdown.classList.contains("clicked") === false){
+                            document.querySelector(".drop-down-content").style.display = "block"
+                            dropdown.classList.add("clicked")
+                        }
+                        else{
+                            document.querySelector(".drop-down-content").style.display = "none"
+                            dropdown.classList.remove("clicked")
+                        }
+
+                    }
+                </script>
+            </ul>
+            <!-- <div id="sms">
+                <img src="image/letter.png" alt="" id="letter"><div id="info"><p>Name: Tet Davann</p><p>Email: davanncr@gmail.com</p><a href="">Logout</a></div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Restaurant content -->
+
+    <div id="top-menu">
+        <div class="content-left">
+            <h2>Namaste Indian</h2>
+            <ul>
+                <li>Tags:</li>
+                <li><a href="#"><div>Popular</div></a></li>
+                <li><a href="#"><div>Fast Food</div></a></li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li><button><a href="#menu">Menu</a></button></li>
+                <li><a href="#" class="content-sign content-sign1"><iconify-icon icon="mdi:lead-pencil" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Review</a></li>
+                <li><a href="#" class="content-sign content-sign2"><iconify-icon class="favorite-icon" icon="mdi:cards-heart-outline" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Favorite</a></li>
+                <li><a href="#" class="content-sign content-sign3"><iconify-icon icon="mdi:share" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Share</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="show-image">
+        <div class="images">
+            <div class="image-1">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/ac/d2/f4/namaste-india-bkk-a-touch.jpg" alt="">
+            </div>
+            <div class="image-2">
+                <img src="image/recom-8.webp" alt="">
+                <img src="image/recom-10.webp" alt="" style="margin-top: -3.8px;">
+            </div>
+        </div>
+        <div class="box">
+            <!-- <img src="../image/recom-4.jpg" alt=""> -->
+            <div class="circle">
+                    <iconify-icon icon="material-symbols:fastfood-rounded"></iconify-icon>
+                    <div class="image" id="drink1"><img src="image/drink1.png"></div>
+                    <div class="image" id="food1"><img src="image/food1.png"></div>
+                    <div class="image" id="food2"><img src="image/food2.png"></div>
+                    <div class="image" id="food3"><img src="image/food3.png"></div>
+                    <div class="image" id="drink2"><img src="image/drink2.png"></div>
+                    <div class="image" id="food4"><img src="image/food4.png"></div>
+                    <div class="image" id="food5"><img src="image/food5.png"></div>
+            </div>
+        </div>
+    </div>
+    <!-- overview -->
+    <div class="overview">
+        <fieldset>
+            <legend>Overview</legend>
+            <div class="text">
+                For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine. For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine. At Swagat Indian Restaurant, we cook food with passion, serve with love. Our dishes are prepared with aromatic imported spices, responsibly sourced meet and hand picked vegetables. We are committed to make your dining experience a memorable one. Come in and find your seat to a journey through the melange of aromatic & delicious Indian food.
+            </div><br>
+            <div class="overview-mid-content">
+                <div id="menu">
+                    <div class="menu-title">Menu</div>
+                    <div class="menu-list"><img src="https://namasterestaurant.gr/wp-content/uploads/2020/06/menu-starters-namaste-scaled.jpg" alt=""></div>
+                </div>
+                <div class="trending">
+                    <div class="trending-title">Trending Foods and Photos</div>
+                    <div class="trending-photos">
+                        <div class="trending-items trending-content1">
+                            <img src="https://static.wixstatic.com/media/d080e9_e3ac847f683347168ed720ed8137eaf9~mv2.jpg/v1/fill/w_640,h_496,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d080e9_e3ac847f683347168ed720ed8137eaf9~mv2.jpg">
+                        </div>
+                        <div class="trending-items trending-content2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb0TOea4cWZGtcsJCkRwilGpY4GGyF3lBq3g&usqp=CAU">
+                        </div>
+                        <div class="trending-items trending-content3">
+                            <img src="https://www.foodbuzz.site/wp-content/uploads/2019/08/DSC_2406-1000x667.jpg">
+                        </div>
+                        <div class="trending-items trending-content4">
+                            <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2019/07/Flavors-of-India-Restaurant.jpg">
+                        </div>
+                        <div class="trending-items trending-content5">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItyZdCY1ivVoTra9v2cYFUUeU2kyers5oRg&usqp=CAU">
+                        </div>
+                        <div class="trending-items trending-content6">
+                            <img src="https://fastly.4sqi.net/img/general/600x600/533941546_dMr4uzDt5zcABotzKT8yUsh1b3q8t_hDQvLvdgVeMS8.jpg">
+                        </div>
+                        <div class="trending-items trending-content7">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/90/0a/8b/namaste-india-restaurant.jpg">
+                        </div>
+                        <div class="trending-items trending-content8">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrNzjn0HXMkPRlsoVxmBOeGpQzkA8ARZL-zg&usqp=CAU">
+                        </div>
+                        <div class="trending-items trending-content9">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlFcf7_slcp6lqpLDvQa3pzdjBfIlQNwiKJg&usqp=CAU">
+                        </div>
+                        <div class="trending-items trending-content10">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-p/18/06/67/53/namaste-india-restaurant.jpg">
+                        </div>
+                        <div class="trending-items trending-content11">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/dc/39/82/awesome-india-cuisine.jpg">
+                        </div>
+                        <div class="trending-items trending-content12">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbUiqs_j69adVdF45dw_Y1_B5A9zhAjQPviA&usqp=CAU">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-set">
+                <button>Reserve Now</button>
+                <label class="spacing">|</label>
+                <label  class="fa fa-map-marker" aria-hidden="true"></label>
+                <div class="location"><a id="location" href="#">Restaurant location,Restaurant location,Restaurant location</a></div>
+                <label class="spacing">|</label>
+                <label for="phone-number" class="fa fa-phone"></label>
+                <div><a id="phone-number" href="tel:0964526262">+855 964 526 262</a></div>
+                <label class="spacing">|</label>
+                <label for="website" id="globe"><img src="../image/globe.png" alt=""width=15vw class="globe-img"></label>
+                <div><a id="website" href="#">Website</a></div>
+                <label class="spacing">|</label>
+                <label class="res-detail">
+                    <label class="opening-time">
+                        <label class="fa fa-clock-o" aria-hidden="true"></label>
+                        <label>7:00am-8:00pm</label>
+                        <label class="fa fa-status"></label>
+                        <label class="open" aria-hidden="true">Open</label>
+                        <label class="close" aria-hidden="true">Close</label>
+                    </label>
+                    <label class="spacing">|</label>
+                    <label for="" class="price-range">
+                        <label class="fa fa-dollar"></label>
+                        <label>Price range:  $2 - $50</label>
+                    </label>
+                </label>
+            </div>
+        </fieldset>        
+    </div>
+    <!-- Review & Comment -->
+    <div class="underBody">
+        <div class="review">
+            <fieldset>
+                <legend>Review</legend>
+                <p style="font-weight: bolder;">Share your thought</p>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username" class="flabel1">Username&nbsp;</label><input type="text" name="name" id="username" required style="display: none;">
+                                <label for="email" class="flabel2">&nbsp;&nbsp;Email&nbsp;</label><input type="email" name="email" id="email" required style="display: none;"><br><br>
+                                <input type="text" name="currentdate" id="currentDate" style="display: none;">
+                            </th>
+                            <script src="js/display.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="review-section">
+                                <div>Your review:</div>
+                                <textarea name="comment" id="comment" cols="35" rows="7" placeholder="comment here" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Rate :</label><label id="ratingStar">
+                                    <input type="radio" name="star" id="st1" value="1" class="numStars" required>
+                                    <label class="fa fa-star" id="star1" for="st1" class="numStars"></label>
+                                    <input type="radio" name="star" id="st2" value="2" class="numStars" required>
+                                    <label class="fa fa-star" id="star2" for="st2" class="numStars"></label>
+                                    <input type="radio" name="star" id="st3" value="3" class="numStars" required>
+                                    <label class="fa fa-star" id="star3" for="st3" class="numStars"></label>
+                                    <input type="radio" name="star" id="st4" value="4" class="numStars" required>
+                                    <label class="fa fa-star" id="star4" for="st4" class="numStars"></label>
+                                    <input type="radio" name="star" id="st5" value="5" class="numStars" readonly>
+                                    <label class="fa fa-star" id="star5" for="st5" class="numStars"></label>
+                                </label>
+                                <p id="ratingRecomment">&nbsp;</p>
+                            </td>
+                        </tr>
+                    </table> 
+
+                    <button id="post" type="submit">Post</button><label id="eror" style="color:red;padding-left: 50px;"></label>            
+                </form>
+                <script src="js/sheetDB.js"></script>
+                <label style="font-weight: bold;">Reviews(<label id="numRecomment"></label>)</label>
+                <button id="refresh" style="background-color: white;border: none;margin-left: 80%;">
+                    <span class="fa fa-refresh" id="logoRefresh" style="font-size:18px"></span>
+                </button><br><br>
+                <div id="getPost">
+
+                </div>
+
+            </fieldset>
+        </div>
+        <!-- Similar Restaurant -->
+        <div class="menuRestaurant">
+            <label class="similar-res-title">Similar Restaurants</label>  
+            <div class="similarRestaurant">
+                    <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-1:00pm</span>                   
+                      </div>
+                  </div>
+      
+            </div>
+      </div>
+    </div>
+    <div class="orangebar"></div>
+    <div id="footer">
+        <div class="left">
+            <img src="../image/logo.png" alt="logo">
+            <h3>Follow us:</h3>
+            <div class="social-media">
+                <a href="#" class="fa fa-facebook-square" aria-hidden="true"></a>
+                <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter-square" aria-hidden="true"></a>
+                <a href="#"class="fa fa-telegram" aria-hidden="true"></a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="#" class="other">Privacy Policy</a>
+            <a href="#" class="other">Terms & Conditions </a>
+            <a href="#" class="other">Contact Us</a>
+            <a href="#" class="other">Feedback</a>            
+        </div>    
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="../js/windowScroll.js"></script>
+    <script src="../js/start.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="js/similarity.js"></script>
+</body>
+
+</html>

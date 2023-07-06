@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <style>
+        @import 'css/form.css';
+    </style>
+            <script>
+
+                // window.addEventListener('beforeunload', function (e) {
+                //     localStorage.url='main.html'
+                // });
+                function afterleave(){
+                    
+                    
+                }
+            </script>
+</head>
+<body>
+    <div class="container">
+        <div class="formBox">
+            <div class="background">
+                <div class="btn"></div>
+                <div class="login">SignIn</div>
+                <div class="signup">SignUp</div>
+            </div>
+            <br><br>
+            <form id="formSignup">
+                <input type="text" name="firstnames" id="firstnames" placeholder="Enter firstname" required><br><br>
+                <input type="text" name="lastnames" id="lasstnames" placeholder="Enter lastname" required><br><br>
+                <input type="email" name="emails" id="emails" placeholder="Enter email" required><br><br>
+                <input type="password" name="passwords" id="passwords" placeholder="Enter password" required><br><br>
+                <input type="password" name="repasswords" id="repasswords"placeholder="Enter re-password" required><br><br>
+                <input type="checkbox" name="agree" id="agree" value="1"><label for="agree">I agree to the term & conditions</label><br><br><br>
+                <button type="submit" class="register" id="signupData">SignUp</button>
+            </form>
+            <script src="js/signup.js"></script>
+            <div id="formLogin">
+                <input type="email" name="email" id="email" placeholder="Enter email" required><br><br>
+                <input type="password" name="password" id="password" placeholder="Enter password" required><br><br>
+                <input type="checkbox" name="remember" id="remember"><label for="remember">Remember</label><br><br><br>
+                <button class="register" id="loginData">SignIn</button><br><br>
+                <label for="" id="answer" style="color:red;font-size: 12px;margin-left:37%;"></label>
+            </div>
+            <script src="js/signin.js"></script>
+    </div>
+    <script src="js/form.js"></script>
+
+</body>
+</html>

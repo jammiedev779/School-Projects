@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&family=Kotta+One&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <style>
+        @import 'css/style.css';
+        @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+        @import 'css/about us.css';
+    </style>
+    <script>
+        function goLoging(){
+            window.open('form.html','_parent')
+        }
+    </script>
+</head>
+
+<body>
+    <label id="for-back"></label>
+    <div class="header-bar">
+        <div>
+            <a href="index.html" class="web-logo">
+                <img src="image/logo.png" class="logo-bar">
+                <div style="transform:translateX(2.35rem);text-align: left;" class="logo-title">
+                    <label class="label-logo">Phnom Penh Restaurant</label><br>
+                    <label class="label-logo-description" style="font-size:12px;font-family: Inconsolata; cursor: pointer;">find your favorite place to enjoy your
+                        meal!</label>
+                </div>
+            </a>
+        </div>
+        <div class="body-search">
+            <div class="form">
+                <button type="submit" id="button-search"><img src="image/search.png" alt="" width="20px"></button>
+                <input type="search" name="" id="search-bar" placeholder="Search for any Restaurant">
+                <select name="" id="filter" >
+                    <option value="" class="f1">Filter</option>
+                    <option value="" class="f">Popular</option>
+                    <option value="" class="f">Breakfast Served</option>
+                    <option value="" class="f">Lunch Served</option>
+                    <option value="" class="f">Dinner Served</option>
+                    <option value="" class="f">Fast Food</option>
+                    <option value="" class="f">Chinese & Japenese</option>
+                    <option value="" class="f">Nearby</option>
+                    <option value="" class="f">Bars and Rooftop</option>
+                    <option value="" class="f">Buffet</option>
+                </select>
+                <script src="js/actionSellectorBar.js"></script>
+            </div>
+            <!-- <div class="list-search">
+                <a href="#"><li>Zhan Liang Chinese</li></a>
+                <a href="#"><li>YiSang</li></a>
+                <a href="#"><li>Terraza</li></a>
+                <a href="#"><li>Sundown Social Club</li></a>
+                <a href="#"><li>Red Bar</li></a>
+                <a href="#"><li>One More</li></a>
+                <a href="#"><li>Metro Azura</li></a>
+                <a href="#"><li>Ming Palace</li></a>
+            </div>             -->
+
+
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="map.html" class="map">Map</a></li>
+                <li><a href="aboutUs.html">About US</a></li>
+                <li id="forLogin"></li>
+                <div onclick="dropDown()" class="toggle-menu">
+                    <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                    <div class="drop-down-content">
+                        <a href="map.html" class="map">Map</a>
+                        <a href="aboutUs.html">About US</a>
+                        <a id="forLogin" href="#">Account</a>
+                    </div>
+                </div>
+                <script>
+                    function dropDown(){
+                        let dropdown = document.querySelector(".drop-down-content")
+                        if(dropdown.classList.contains("clicked") === false){
+                            document.querySelector(".drop-down-content").style.display = "block"
+                            dropdown.classList.add("clicked")
+                        }
+                        else{
+                            document.querySelector(".drop-down-content").style.display = "none"
+                            dropdown.classList.remove("clicked")
+                        }
+
+                    }
+                </script>
+            </ul>
+            <!-- <div id="sms">
+                <img src="image/letter.png" alt="" id="letter"><div id="info"><p>Name: Tet Davann</p><p>Email: davanncr@gmail.com</p><a href="">Logout</a></div>
+            </div> -->
+        </div>
+    </div>
+
+    </div>
+    
+    <div class="body-content">
+        <div class="about-us">
+            <h3>About us</h3>
+            <div id="description">
+                Our vision is to be the website which everyone feel easy to find the best place to eat,
+                suitable environment that they like, promote their own restaurant, reviews the restaurant
+                they like, and enjoy eating where they like.
+            </div>
+            <h3>Our Team</h3>
+            <div class="profile">
+                <div id="kimlang" class="image">
+                    <img src="image/our profile/kimlang.png" alt="kimlang">
+                    <div>Miss. So Kimlang</div>
+                </div>
+                <div id="vinun" class="image">
+                    <img src="image/our profile/vinun.png" alt="vinun">
+                    <div>Mr. Sombath Vinun</div>
+                </div>
+                <div id="davann" class="image">
+                    <img src="image/our profile/davann.png" alt="davann">
+                    <div>Mr. Tet Davann</div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h3>Contact us by:</h3>
+            <div class="social-media">
+                <a href="#" class="fa fa-facebook-square" aria-hidden="true"></a>
+                <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter-square" aria-hidden="true"></a>
+                <a href="#"class="fa fa-telegram" aria-hidden="true"></a>
+            </div>
+        </div>
+        <div class="privacy-term-and-condition">
+            <div class="privacy">
+                <h3>Privacy and Policy</h3>
+                <div>
+                    This privacy notice aims to give you information on how Restaurant Sat Bains Ltd collects and processes your personal data when you visit our restaurant or stay with us, where you would like to work for us, and your use of www.restaurantsatbains.com, including any data you may provide through this website when you submit any information requests and any subsequent bookings.
+                </div>
+            </div>
+            <div class="term">
+                <h3>Term and Condition</h3>
+                <div>
+                    By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <h3>Feed back:</h3>
+        <input id="email" type="email" placeholder="Email address">
+        <textarea name="feedback-text" id="feedback-text" cols="30" rows="2" placeholder="write here"></textarea>
+    </div>
+    
+    <script src="js/windowScroll.js"></script>
+    <script src="js/start.js"></script>
+</body>
+
+
+</html>

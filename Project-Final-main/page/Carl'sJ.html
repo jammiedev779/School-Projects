@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&family=Kotta+One&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <style>
+        @import '../css/style.css';
+        @import '../css/restaurant.css';
+        @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+    </style>
+    <script>
+        let commentAPI='https://script.google.com/macros/s/AKfycbwRKvYS261n9GLr3ltw_FlrWHMn-RBxRYf4sHR8LgnHIVmGTE0Y5Iaixyk2wGgNn_UilQ/exec'
+        function goLoging(){
+            window.open('../form.html','_parent')
+        }
+    </script>
+</head>
+
+<body>
+    <label id="for-back"></label>
+    <div class="header-bar">
+        <div>
+            <a href="../index.html" class="web-logo">
+                <img src="../image/logo.png" class="logo-bar">
+                <div style="transform:translateX(2.35rem);text-align: left;" class="logo-title">
+                    <label class="label-logo">Phnom Penh Restaurant</label><br>
+                    <label class="label-logo-description" style="font-size:12px;font-family: Inconsolata; cursor: pointer;">find your favorite place to enjoy your
+                        meal!</label>
+                </div>
+            </a>
+        </div>
+        <div class="body-search">
+            <div class="form">
+                <button type="submit" id="button-search"><img src="../image/search.png" alt="" width="20px"></button>
+                <input type="search" name="" id="search-bar" placeholder="Search for any Restaurant">
+                <select name="" id="filter">
+                    <option value="" class="f1">Filter</option>
+                    <option value="" class="f">Popular</option>
+                    <option value="" class="f">Breakfast Served</option>
+                    <option value="" class="f">Lunch Served</option>
+                    <option value="" class="f">Dinner Served</option>
+                    <option value="" class="f">Fast Food</option>
+                    <option value="" class="f">Chinese & Japenese</option>
+                    <option value="" class="f">Nearby</option>
+                    <option value="" class="f">Bars and Rooftop</option>
+                    <option value="" class="f">Buffet</option>
+                </select>
+                <script src="../js/actionSellectorBar.js"></script>
+            </div>
+            <!-- <div class="list-search">
+                <a href="#"><li>Zhan Liang Chinese</li></a>
+                <a href="#"><li>YiSang</li></a>
+                <a href="#"><li>Terraza</li></a>
+                <a href="#"><li>Sundown Social Club</li></a>
+                <a href="#"><li>Red Bar</li></a>
+                <a href="#"><li>One More</li></a>
+                <a href="#"><li>Metro Azura</li></a>
+                <a href="#"><li>Ming Palace</li></a>
+            </div>             -->
+
+
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="../map.html" class="map">Map</a></li>
+                <li><a href="../aboutUs.html">About US</a></li>
+                <li id="forLogin"></li>
+                <div onclick="dropDown()" class="toggle-menu">
+                    <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                    <div class="drop-down-content">
+                        <a href="../map.html" class="map">Map</a>
+                        <a href="../aboutUs.html">About US</a>
+                        <a id="forLogin" href="#">Account</a>
+                    </div>
+                </div>
+                <script>
+                    function dropDown(){
+                        let dropdown = document.querySelector(".drop-down-content")
+                        if(dropdown.classList.contains("clicked") === false){
+                            document.querySelector(".drop-down-content").style.display = "block"
+                            dropdown.classList.add("clicked")
+                        }
+                        else{
+                            document.querySelector(".drop-down-content").style.display = "none"
+                            dropdown.classList.remove("clicked")
+                        }
+
+                    }
+                </script>
+            </ul>
+            <!-- <div id="sms">
+                <img src="image/letter.png" alt="" id="letter"><div id="info"><p>Name: Tet Davann</p><p>Email: davanncr@gmail.com</p><a href="">Logout</a></div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Restaurant content -->
+
+    <div id="top-menu">
+        <div class="content-left">
+            <h2>Carl's Jr. Cambodia</h2>
+            <ul>
+                <li>Tags:</li>
+                <li><a href="#"><div>Popular</div></a></li>
+                <li><a href="#"><div>Fast Food</div></a></li>
+            </ul>
+        </div>
+        <div class="content-right">
+            <ul>
+                <li><button><a href="#menu">Menu</a></button></li>
+                <li><a href="#comment" class="content-sign content-sign1"><iconify-icon icon="mdi:lead-pencil" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Review</a></li>
+                <li><a href="#" class="content-sign content-sign2"><iconify-icon class="favorite-icon" icon="mdi:cards-heart-outline" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Favorite</a></li>
+                <li><a href="#" class="content-sign content-sign3"><iconify-icon icon="mdi:share" style="font-size: 20px; margin-bottom: -3px; margin-right: 3px;"></iconify-icon>Share</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div class="show-image">
+        <div class="images">
+            <div class="image-1">
+                <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/318211642_2336688869830589_5074444934083902904_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=0DDQTGdBG3MAX87fh0f&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfDRWOl6Ep_GHsvxhMFLyHbgKYVP-qKlUD4UL-FNZyBSPQ&oe=63A290B8" alt="">
+            </div>
+            <div class="image-2">
+                <img src="https://scontent.fpnh8-1.fna.fbcdn.net/v/t39.30808-6/319724630_5628899513883828_7545763694324484910_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=TREnItPrfCUAX8WgH2k&_nc_zt=23&_nc_ht=scontent.fpnh8-1.fna&oh=00_AfApJ6ZJnPqWGDaTlaGx-Yj0iZGi-DSsegTqM_33PLq6FA&oe=63A2044A" alt="">
+                <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/318512459_5627904740649972_689474356277394467_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=ghOH-GIT-hkAX9e3yBD&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfCvAoqMMLOZr9DTQDeUPJSoPPTK4v46hmCdxXgao8uZ6A&oe=63A2471B" alt="" style="margin-top: -3.8px;">
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://scontent.fpnh8-1.fna.fbcdn.net/v/t39.30808-6/310799299_410541541280343_4746194356722858601_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=y4vk4UREqagAX_moKsS&_nc_zt=23&_nc_ht=scontent.fpnh8-1.fna&oh=00_AfAFdLvCySESWhoP-_y_y-fPAmfwgEe4nBt7Qh1AfQH8cA&oe=63A28E88" width="50%">
+        </div>
+    </div>
+    <!-- overview -->
+    <div class="overview">
+        <fieldset>
+            <legend>Overview</legend>
+            <div class="text">
+                Welcome to the official Carl’s Jr.® Facebook page, where friends of Happy Star® and Carl’s Jr. get their fix for premium food and premium entertainment.
+                Founded by industry pioneer Carl N. Karcher, Carl's Jr. has been a West Coast staple for 70 years and is regarded as the place to go for premium quality, distinctive charbroiled burgers.
+            </div><br>
+            <div class="overview-mid-content">
+                <div id="menu">
+                    <div class="menu-title">Menu</div>
+                    <div class="menu-list"><img src="https://3.bp.blogspot.com/-UhGGC-qFvS4/WAg7N1NMEqI/AAAAAAAA8wQ/JJqKhXOHhogHpUMqXrt6wxrDri2vksCkQCLcB/w1200-h630-p-k-no-nu/Capturey.jpg" alt=""></div>
+                </div>
+                <div class="trending">
+                    <div class="trending-title">Trending Foods and Photos</div>
+                    <div class="trending-photos">
+                        <div class="trending-items trending-content1">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/319643029_673769974537882_6766915957199759988_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=1rfPF0d-s5kAX-PMBdu&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfCpW9XoPyuZ6GxjSCYzQBGllUg_fRPTpgBLQygNtj7BgA&oe=63A39BD8">
+                        </div>
+                        <div class="trending-items trending-content2">
+                            <img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/319270722_5617535585020221_3223036930484628832_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=kBrkVDZFg7MAX9sLo15&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfBQBbXbJla7ejL6yiz-NbjIA76k3q61Nj6Hd92hvbxEuQ&oe=63A3BFFA">
+                        </div>
+                        <div class="trending-items trending-content3">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/317626137_5602855493154897_335627435737386509_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=3eKWCMw92fwAX-zZoYE&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfB36tmsUeLE2hQ-ecL63l4qFbE5ByZ5VXt0ksiVV8Gm5A&oe=63A39715">
+                        </div>
+                        <div class="trending-items trending-content4">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/316167868_5594737993966647_7913653457149160720_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=gZMy3mIhv84AX8ITH6e&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfDJZ0Zb1ova0zQmWEJxhLokgTnBJsZqSjyeyk2ZWJtLAA&oe=63A1FF7E">
+                        </div>
+                        <div class="trending-items trending-content5">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/318118889_5597822673658179_6061353044852497295_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yHe4LEnI4JUAX_CuU3W&_nc_oc=AQnW1azjOHRmLjGtvWKw0YTJfhw6Enkx3b1r_P61liysF5458_Zfclf9W3sKzq4SqzY&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAbnHOIW67GYLfrk_qZK7PAhm1c0Vk1Em2P0uBy_WGBTQ&oe=63A2CCD0">
+                        </div>
+                        <div class="trending-items trending-content6">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/315549049_5580462112060902_6860365570486988826_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XcdZcF815-wAX-xxXcF&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfATGjKIsMv8_9VNaLiGFuU5OpGnz6-Nho-lkWDHxpGQtg&oe=63A26B52">
+                        </div>
+                        <div class="trending-items trending-content7">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/317641939_5591975014242945_7981026985997149952_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=g5QP6erdB3UAX_SLtUq&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAL7uNgTseJm192gNJumRa6mlaFQ95G9-sm3zZGYmenBw&oe=63A2094E">
+                        </div>
+                        <div class="trending-items trending-content8">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/316270612_5555382434568870_6315878377639643602_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=afbcrnIvRR4AX-1Futj&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfCIBytp6RdFXRaL0qENMNKyGzxhfbXx2AajJRdBVDlyBQ&oe=63A37742">
+                        </div>
+                        <div class="trending-items trending-content9">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/313900851_5513037508803363_5593391689845449611_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=2xP84ktspZYAX-652_J&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfA7IBion14FN-TACV5VzcuACvnZxRIz7DvIBIZGlNpK3w&oe=63A3854B">
+                        </div>
+                        <div class="trending-items trending-content10">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/312459539_5512211662219281_5311742845905623955_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=Yu1jzniqHZEAX_lgmmu&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfALpWw22HWUKDwU5H9eyjB42WEMDi4mnxwq9aTjJxRGwg&oe=63A35EDF">
+                        </div>
+                        <div class="trending-items trending-content11">
+                            <img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/312591414_5491078687665912_3983695047969366280_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=vZg1sFP8WFcAX9TJlhK&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfADDLxNPMf6eU2wLBWx4eh1lDhUA0HNa7sdNnXZm1e9Qg&oe=63A2BF21">
+                        </div>
+                        <div class="trending-items trending-content12">
+                            <img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/310965249_5421548141285634_2513270127292683338_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=OkhizS0DSj8AX98VqYj&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfCkMMhmyzPi-qsgZHgdWEpm3UGCknnstFnSvY5D51F14A&oe=63A223A5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-set">
+                <button>Reserve Now</button>
+                <label class="spacing">|</label>
+                <label  class="fa fa-map-marker" aria-hidden="true"></label>
+                <div class="location"><a id="location" href="https://www.google.com/maps/place/Carl's+Jr.+Burger+Kampuchea+Krom/@11.5664104,104.8932112,17z/data=!3m1!4b1!4m5!3m4!1s0x31095163335844d1:0x2899502e199ffb40!8m2!3d11.5664052!4d104.8953999">1 No, Ork, 830 Kampuchea Krom Blvd (128), Phnom Penh</a></div>
+                <label class="spacing">|</label>
+                <label for="phone-number" class="fa fa-phone"></label>
+                <div><a id="phone-number" href="tel:099666280">099 666 280</a></div>
+                <label class="spacing">|</label>
+                <label for="website" id="globe"><img src="../image/globe.png" alt=""width=15vw class="globe-img"></label>
+                <div><a id="website" href="https://web.facebook.com/CarlsJr.Cambodia/?_rdc=1&_rdr">Carl's Jr. Cambodia</a></div>
+                <label class="spacing">|</label>
+                <label class="res-detail">
+                    <label class="opening-time">
+                        <label class="fa fa-clock-o" aria-hidden="true"></label>
+                        <label>10:00am-10:00pm</label>
+                        <label class="fa fa-status"></label>
+                        <label class="open" aria-hidden="true">Open</label>
+                        <label class="close" aria-hidden="true">Close</label>
+                    </label>
+                    <label class="spacing">|</label>
+                    <label for="" class="price-range">
+                        <label class="fa fa-dollar"></label>
+                        <label>Price range:  $3 - $8</label>
+                    </label>
+                </label>
+            </div>
+        </fieldset>        
+    </div>
+    <!-- Review & Comment -->
+    <div class="underBody">
+        <div class="review">
+            <fieldset>
+                <legend>Review</legend>
+                <p style="font-weight: bolder;">Share your thought</p>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username" class="flabel1">Username&nbsp;</label><input type="text" name="name" id="username" required style="display: none;">
+                                <label for="email" class="flabel2">&nbsp;&nbsp;Email&nbsp;</label><input type="email" name="email" id="email" required style="display: none;"><br><br>
+                                <input type="text" name="currentdate" id="currentDate" style="display: none;">
+                            </th>
+                            <script src="js/display.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="review-section">
+                                <div>Your review:</div>
+                                <textarea name="comment" id="comment" cols="35" rows="7" placeholder="comment here" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Rate :</label><label id="ratingStar">
+                                    <input type="radio" name="star" id="st1" value="1" class="numStars" required>
+                                    <label class="fa fa-star" id="star1" for="st1" class="numStars"></label>
+                                    <input type="radio" name="star" id="st2" value="2" class="numStars" required>
+                                    <label class="fa fa-star" id="star2" for="st2" class="numStars"></label>
+                                    <input type="radio" name="star" id="st3" value="3" class="numStars" required>
+                                    <label class="fa fa-star" id="star3" for="st3" class="numStars"></label>
+                                    <input type="radio" name="star" id="st4" value="4" class="numStars" required>
+                                    <label class="fa fa-star" id="star4" for="st4" class="numStars"></label>
+                                    <input type="radio" name="star" id="st5" value="5" class="numStars" readonly>
+                                    <label class="fa fa-star" id="star5" for="st5" class="numStars"></label>
+                                </label>
+                                <p id="ratingRecomment">&nbsp;</p>
+                            </td>
+                        </tr>
+                    </table> 
+
+                    <button id="post" type="submit">Post</button><label id="eror" style="color:red;padding-left: 50px;"></label>            
+                </form>
+                <script src="js/sheetDB.js"></script>
+                <label style="font-weight: bold;">Reviews(<label id="numRecomment"></label>)</label>
+                <button id="refresh" style="background-color: white;border: none;margin-left: 80%;">
+                    <span class="fa fa-refresh" id="logoRefresh" style="font-size:18px"></span>
+                </button><br><br>
+                <div id="getPost">
+
+                </div>
+
+            </fieldset>
+        </div>
+        <!-- Similar Restaurant -->
+        <div class="menuRestaurant">
+            <label class="similar-res-title">Similar Restaurants</label>  
+            <div class="similarRestaurant">
+                    <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-8:00pm</span>                   
+                      </div>
+                  </div>
+                  <div class="menu">
+                      <a href="#"><img src="../image/recomment restaurant assets/recom-1.jpg" alt=""></a>
+                      <div class="res-title-and-status">
+                          <a href="#"><div class="name-restaurant">Restaurant</div><br><br></a>
+                            <span class="span-popular2 open">Open</span>
+                            <span class="span-popular2 close" style="display: none;">Close</span>
+                      </div>
+                      <div class="footer-menu">
+                          <div class="ratingStar">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star"></span>
+                              <span class="fa fa-star"></span>
+                          </div>
+                          <span class="span-popular">Popular</span>
+                          <span class="span-popular1">8:00am-1:00pm</span>                   
+                      </div>
+                  </div>
+      
+            </div>
+      </div>
+    </div>
+    <div class="orangebar"></div>
+    <div id="footer">
+        <div class="left">
+            <img src="../image/logo.png" alt="logo">
+            <h3>Follow us:</h3>
+            <div class="social-media">
+                <a href="../aboutUs.html" class="fa fa-facebook-square" aria-hidden="true"></a>
+                <a href="../aboutUs.html" class="fa fa-instagram" aria-hidden="true"></a>
+                <a href="../aboutUs.html" class="fa fa-twitter-square" aria-hidden="true"></a>
+                <a href="../aboutUs.html"class="fa fa-telegram" aria-hidden="true"></a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="../aboutUs.html" class="other">Privacy Policy</a>
+            <a href="../aboutUs.html" class="other">Terms & Conditions </a>
+            <a href="../aboutUs.html" class="other">Contact Us</a>
+            <a href="../aboutUs.html" class="other">Feedback</a>            
+        </div>    
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="../js/windowScroll.js"></script>
+    <script src="../js/start.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="js/similarity.js"></script>
+</body>
+
+</html>

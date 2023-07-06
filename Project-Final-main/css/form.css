@@ -1,0 +1,99 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(to right,#ff105f,#ffad06); */
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+.formBox{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    overflow: hidden;
+}
+.background{
+    width: 380px;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+
+}
+.login,.signup{
+    padding-top:5px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    background: transparent;
+    width: 50%;
+    border: none;
+    position: relative;
+    text-align: center;
+    
+}
+.btn{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+form input,#formLogin input{
+    width: 90%;
+    height: 40px;
+    margin-left: 5%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1.5px solid orange;
+}
+
+form input[type="checkbox"],#formLogin input[type="checkbox"]{
+    width: 12px;
+    height: 12px;
+    outline: none;
+    font-size: 15px;
+    background:none
+}
+
+::placeholder{
+    color:black;
+    font-size: 19px;
+}
+.register{
+    font-size: 15px;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    width: 70%;
+    margin-left: 15%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+form,#formLogin{
+    position: absolute;
+    width: 100%;
+}
+
+#formSignup{
+    left:400px;
+    transition: all 0.5s;
+}
+#formLogin{
+    transition: all 0.5s;
+}
+form label,#formLogin label{
+    color:black;
+}
+

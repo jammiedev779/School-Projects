@@ -1,0 +1,90 @@
+/* body{
+    display: grid;
+    place-items: center;
+} */
+.body-content{
+    /* width: 88vw; */
+    transform: translateY(8rem);
+    display: grid;
+    grid-template-columns: 25rem 50vw;
+    grid-auto-rows: 80vh;
+}
+.restaurant-categories{
+    margin-left: 7.5rem;
+    font-size: 1.25rem;
+    color:orange;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.nearby{
+    width: 30vw;
+    height: 70vh;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+    gap: 2rem;
+    overflow: scroll !important;
+    margin-top: 0.000005rem;
+}
+.nearby .recom{
+    z-index: 1;
+    margin-top: -1.2rem;
+}
+/* .body-content .map{
+    width: 100%;
+} */
+.gmap_canvas{
+    width: 60vw !important;
+}
+.gmap_iframe{
+    width: 60vw !important;
+}
+.mapouter{
+    width: 60vw !important;
+}
+.body-content .map #map-title {
+    font-size: 1.25rem;
+    color:orange;
+    text-align: center;
+    font-weight: bold;
+}
+.body-content .map #google-map{
+    height: 68vh;
+    margin-top: 2rem;
+}
+.orangebar{
+    /* width: 100vw; */
+    display: grid;
+    place-items: center;
+    transform: translateY(10rem);
+    padding-top: 1.5rem;
+    z-index: 0;
+}
+#footer{
+    z-index: 1;
+}
+
+@media only screen and (max-width:1000px){
+    .body-content{
+        grid-template-columns: 100vw;
+        place-items: center;
+        padding: 0 1rem;
+    }
+    .restaurant-categories{
+        width: 40vw;
+        margin-left: 38%;
+    }
+    .nearby{
+        width: 80vw;
+        flex-wrap: nowrap;
+        height: 17rem;
+       
+        padding-left: 1.5rem;
+    }
+    
+}
+/* @media only screen and (max-width:768px){
+    .side-left{
+        display: none;
+    }
+} */

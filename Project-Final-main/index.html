@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter&family=Kotta+One&display=swap" rel="stylesheet">
+    
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <style>
+        @import 'css/style.css';
+        @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+        /* #sms{
+            transform: translate(-305px,85px);
+        } */
+    </style>
+    <script>
+
+        function goLoging(){
+            window.open('form.html','_parent')
+            
+        }
+        
+    </script>
+</head>
+
+<body>
+    <label id="for-back"></label>
+    <div class="header-bar">
+        <div>
+            <a href="index.html" class="web-logo">
+                <img src="image/logo.png" class="logo-bar">
+                <div style="transform:translateX(2.35rem);text-align: left;" class="logo-title">
+                    <label class="label-logo">Phnom Penh Restaurant</label><br>
+                    <label class="label-logo-description" style="font-size:12px;font-family: Inconsolata; cursor: pointer;">find your favorite place to enjoy your
+                        meal!</label>
+                </div>
+            </a>
+        </div>
+        <div class="body-search">
+            <div class="form">
+                <button type="submit" id="button-search"><img src="image/search.png" alt="" width="20px"></button>
+                <input type="search" name="" id="search-bar" placeholder="Search for any Restaurant">
+                <select name="" id="filter" >
+                    <option value="" class="f1">Filter</option>
+                    <option value="" class="f">Popular</option>
+                    <option value="" class="f">Breakfast Served</option>
+                    <option value="" class="f">Lunch Served</option>
+                    <option value="" class="f">Dinner Served</option>
+                    <option value="" class="f">Fast Food</option>
+                    <option value="" class="f">Chinese & Japenese</option>
+                    <option value="" class="f">Nearby</option>
+                    <option value="" class="f">Bars and Rooftop</option>
+                    <option value="" class="f">Buffet</option>
+                </select>
+                <script src="js/actionSellectorBar.js"></script>
+            </div>
+            <!-- <div class="list-search">
+                <a href="#"><li>Zhan Liang Chinese</li></a>
+                <a href="#"><li>YiSang</li></a>
+                <a href="#"><li>Terraza</li></a>
+                <a href="#"><li>Sundown Social Club</li></a>
+                <a href="#"><li>Red Bar</li></a>
+                <a href="#"><li>One More</li></a>
+                <a href="#"><li>Metro Azura</li></a>
+                <a href="#"><li>Ming Palace</li></a>
+            </div>             -->
+
+
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li><a href="map.html" class="map">Map</a></li>
+                <li><a href="aboutUs.html">About US</a></li>
+                <li id="forLogin"></li>
+                <div onclick="dropDown()" class="toggle-menu">
+                    <iconify-icon icon="material-symbols:menu-rounded"></iconify-icon>
+                    <div class="drop-down-content">
+                        <a href="map.html" class="map">Map</a>
+                        <a href="aboutUs.html">About US</a>
+                        <a id="forLogin" href="#">Account</a>
+                    </div>
+                </div>
+                <script>
+                    function dropDown(){
+                        let dropdown = document.querySelector(".drop-down-content")
+                        if(dropdown.classList.contains("clicked") === false){
+                            document.querySelector(".drop-down-content").style.display = "block"
+                            dropdown.classList.add("clicked")
+                        }
+                        else{
+                            document.querySelector(".drop-down-content").style.display = "none"
+                            dropdown.classList.remove("clicked")
+                        }
+
+                    }
+                </script>
+            </ul>
+            <!-- <div id="sms">
+                <img src="image/letter.png" alt="" id="letter"><div id="info"><p>Name: Tet Davann</p><p>Email: davanncr@gmail.com</p><a href="">Logout</a></div>
+            </div> -->
+        </div>
+    </div>
+
+    </div>
+    <div class="slides">
+        <div class="container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://images.deliveryhero.io/image/fd-kh/LH/t1oq-hero.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="https://foodbuzz.site/api/v1/files/FF0D991A-E017-4DA0-BCE2-73064618B990" alt=""></div>
+                    <div class="swiper-slide"><img src="https://live.staticflickr.com/65535/51794639374_ab8c04595e_o.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/8mf_lQa9w74uEr8Hd6lFZN57IUlbuExZZR42bnX3xc8giZkVFf9j8YycOCHu81ej2ZcC8p0hKuDRu6gddOmF=w1200-h630-pp-rw-v1-e365" alt=""></div>
+                    <div class="swiper-slide"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/318860925_201455915774901_8778306158192292598_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=G9tuLADrUmUAX_skxyF&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfCiHOyE_8tcfSdF4nwfEzVunVQi-T_nz4dECXPpafGykg&oe=63A5DC6E" alt=""></div>
+                    <div class="swiper-slide"><img src="https://www.traveldailynews.asia/sites/default/files/inline-images/FOOD%201_resize.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="image/slide2-assets/slide2.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <div class="body">
+        <div id="body-bar">
+            <fieldset class="share thought">
+                <legend><iconify-icon icon="noto-v1:thought-balloon" width="35px" height="35px"></iconify-icon></legend>
+                <h3 class="h3">Share your thought</h3>
+                <p class="p">Give reviews to any<br>restaurants you've visited.</p>
+            </fieldset>
+            <fieldset class="share fine">
+                <legend><iconify-icon icon="noto-v1:pot-of-food" width="35px" height="35px"></iconify-icon></legend>
+                <h3 class="h3">Find the best place to eat!</h3>
+                <p class="p">There are more than 100<br>restaurants for you to choose.</p>
+            </fieldset>
+            <fieldset class="share reserve">
+                <legend><iconify-icon icon="simple-line-icons:calender" width="35px" height="35px"></iconify-icon></legend>
+                <h3 class="h3">Reserve a table</h3>
+                <p class="p">Make online reservations<br>at the restaurant.</p>
+            </fieldset>
+        </div>
+        <div class="shopping">
+            <br><br><br>
+            <div>
+                <div><label>Recommended for you</label></div>
+                <br>
+                <div class="recommence restaurants restaurant0">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/restaurant1.html"><img src="https://mealeapalacegate.com/wp-content/uploads/2017/08/065A9868-600x400.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/restaurant1.html"><div class="name-restaurant">Mealea Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">We offer vegetarian,non-vegetarian and vegan cuisines</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/restaurant2.html"><img src="image/recomment restaurant assets/recom-2.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Malis Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Malis is a 'Living Cambodian Cuisine'.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/Banh_Chhav_Ela.html"><img src="https://lh3.googleusercontent.com/p/AF1QipOFsyFAevH4dZCgRy2XJFQIbkUHDgs8J6TDmNK3=s1360-w1360-h1020" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Banh Chhav Ela Toul Kork</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy Breakfast,Lunch,Dinner with reasonable price and delicious</span>
+                                <span class="span-popular1">11:00am-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Burger_Shack.html"><img src="https://scontent.fpnh2-2.fna.fbcdn.net/v/t39.30808-6/301507269_1789379631407945_4808406652332384640_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=T9YvtAAHxeEAX_fOwMb&_nc_zt=23&_nc_ht=scontent.fpnh2-2.fna&oh=00_AfCGnEX54ugo2GVJqYOIFA8XUKaLf6KpCGSi8xwTSZF7Zw&oe=639CF0E7" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Burgershack</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Explore our delicious menu at Burger Shack!</span>
+                                <span class="span-popular1">12:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/CUTS.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/17/5d/79/c2/cuts-restaurant-steak.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/CUTS.html"><div class="name-restaurant">CUTS ROSEWOOD</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Experience A Culinary Indulgence At CUTS Restaurant. </span>
+                                <span class="span-popular1">6:00am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/Champei_Garden.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t1.6435-9/140417288_825231661539929_4588948757187967330_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=djyGgP8NoSwAX8-1ciV&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfBuUbmRBUkpyyzaU9QDUIeGcSLvVsTiDy-MWicR1Cj3Hg&oe=63BFF971" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Champei Garden Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Best tasting and authentic in the country.</span>
+                                <span class="span-popular1">7:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/Dejavu.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/315866485_198820179371808_223776074525875507_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=O4TcCeF5cw8AX8ZPedw&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfABaYYeRcbiNiv-jRXcSWo1MEUJodCRA8kiPUqIU54Esg&oe=639D77E0" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Deja Vu -The Garden Pub</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular">Enjoy party together with cocktails and yummy foods.</span>
+                                <span class="span-popular1">4:30pm-12:00pm</span>                   
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/Digby.html"><img src="https://www.kbcambodia.com/wp-content/uploads/2016/12/Diqbys-3.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/Digby.html"><div class="name-restaurant">Digby's Bar and Grill</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Fresh & delicious - Western Asian Fusion.</span>
+                                <span class="span-popular1">8:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-9">
+                            <a href="page/Oishi_Buffet.html"><img src="http://www.foodbuzz.site/wp-content/uploads/2016/10/14358814_1075725535816552_7111921409033867212_n.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Oishi Buffet Sukisoup & BBQ</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">All U Can Eat Seafood Buffet</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-10">
+                            <a href="page/Kyowagyuomakase.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/298512865_152773617358833_6782732766496118826_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=21EHr44KIlIAX9ki3T5&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAd6OjnY8wAjCMFER7R5iUzCkV2tPBUdoR9fuk2AJ5GBQ&oe=63A197AE" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KYŌ Wagyu Omakase</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <span class="span-popular">Japanese fine dining restaurant that fuse traditional Japanese</span>
+                                <span class="span-popular1">12:00pm-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div><br><br>
+            </div>
+
+            <!-- Popular -->
+            <div class="popular" id="category1">
+                <div class="restaurant-categories"><label>Popular Restaurants</label><button class="see-more" id="see-more-1">see all</button><button id="seeless1" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant1">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/restaurant2.html"><img src="image/recomment restaurant assets/recom-2.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Malis Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">A high-end restaurant which boasts a 'Living Cambodian Cuisine'.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/CUTS.html"><img src="https://images.rosewoodhotels.com/is/image/rwhg/rwppn-brasserie-louis-3-1:WIDE-MEDIUM-4-3" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/CUTS.html"><div class="name-restaurant">CUTS ROSEWOOD</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Experience A Culinary Indulgence At CUTS Restaurant.</span>
+                                <span class="span-popular1">6:00am-10:30pm</span>          
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/Burger_Shack.html"><img src="https://scontent.fpnh2-2.fna.fbcdn.net/v/t39.30808-6/301507269_1789379631407945_4808406652332384640_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=T9YvtAAHxeEAX_fOwMb&_nc_zt=23&_nc_ht=scontent.fpnh2-2.fna&oh=00_AfCGnEX54ugo2GVJqYOIFA8XUKaLf6KpCGSi8xwTSZF7Zw&oe=639CF0E7" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Burgershack</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Explore our delicious menu at The Burger Shack</span>
+                                <span class="span-popular1">12:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Dejavu.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/315866485_198820179371808_223776074525875507_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=O4TcCeF5cw8AX8ZPedw&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfABaYYeRcbiNiv-jRXcSWo1MEUJodCRA8kiPUqIU54Esg&oe=639D77E0" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Deja Vu -The Garden Pub</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy party together with cocktails and yummy foods.</span>
+                                <span class="span-popular1">4:30pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Kyowagyuomakase.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/298512865_152773617358833_6782732766496118826_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=21EHr44KIlIAX9ki3T5&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAd6OjnY8wAjCMFER7R5iUzCkV2tPBUdoR9fuk2AJ5GBQ&oe=63A197AE" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KYŌ Wagyu Omakase</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Japanese fine dining restaurant that fuse traditional Japanese</span>
+                                <span class="span-popular1">12:00pm-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="./page/FirstTimeBuffet.html"><img src="image/recomment restaurant assets/recom-6.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">First Time Buffet</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Eat seafood, soup, BBQ as much as you want.</span>
+                                <span class="span-popular1">4:00pm-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/Zhan_Liang_Chinese.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/316678544_851606666276220_2470523915780435248_n.jpg?stp=dst-jpg_p960x960&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=DKCJge69JdoAX_KKh0O&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfD6nPfhTmuhZHo-jiO-Eu1IGoqxdkzy6Gi0M1pTiLrmdw&oe=63A36C4D" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Zhan Liang Chinese Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy a contemporary Chinese dining experience.</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/KFC.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/310084615_5829458107097387_4821581466043403620_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=c5n1g6Weq2QAX8J4wnv&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfC-7sfUz95_Fg-Y5kShiCyVJk2zC7o-Kvu0-fdNf-T-Ig&oe=63A1CB8C" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KFC Cambodia</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular"> American fast food chain headquartered in Louisville, Kentucky.</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <!-- Bar and Rooftop -->
+
+            <div class="BR" id="category2">
+                <div class="restaurant-categories"><label>Bar and Rooftop</label><button class="see-more" id="see-more-2">see all</button><button id="seeless2" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant2">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/Dejavu.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/315866485_198820179371808_223776074525875507_n.jpg?stp=dst-jpg_p960x960&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=O4TcCeF5cw8AX8ZPedw&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfABaYYeRcbiNiv-jRXcSWo1MEUJodCRA8kiPUqIU54Esg&oe=639D77E0" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Deja Vu -The Garden Pub</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular">Enjoy party together with cocktails and yummy foods.</span>
+                                <span class="span-popular1">4:30pm-12:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Digby.html"><img src="https://www.kbcambodia.com/wp-content/uploads/2016/12/Diqbys-3.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/Digby.html"><div class="name-restaurant">Digby's Bar and Grill</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Fresh & delicious - Western Asian Fusion.</span>
+                                <span class="span-popular1">8:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/Burger_Shack.html"><img src="https://scontent.fpnh2-2.fna.fbcdn.net/v/t39.30808-6/301507269_1789379631407945_4808406652332384640_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=T9YvtAAHxeEAX_fOwMb&_nc_zt=23&_nc_ht=scontent.fpnh2-2.fna&oh=00_AfCGnEX54ugo2GVJqYOIFA8XUKaLf6KpCGSi8xwTSZF7Zw&oe=639CF0E7" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Burgershack</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Explore our delicious menu at The Burger Shack</span>
+                                <span class="span-popular1">12:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Eclipse_Sky_bar.html"><img src="https://lh3.googleusercontent.com/p/AF1QipMbqdGFKfBuFeO0J7_sj4DLkLEVMTpsD1LQMemU=w960-h960-n-o-v1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Eclipse Sky Bar</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Eclipse Sky Bar is the highest rooftop bar.</span>
+                                <span class="span-popular1">5:00pm-2:00am</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/FiveFive.html"><img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/03/22/0139/PNHRP-P0239-FiveFive-Rooftop-Restaurant-Bar.jpg/PNHRP-P0239-FiveFive-Rooftop-Restaurant-Bar.16x9.jpg?imwidth=1920" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">FiveFive Rooftop Restaurant & Bar</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Sustainable fresh seafood, exceptional meats and stylish cocktails</span>
+                                <span class="span-popular1">4:00pm-11:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/Le_Moon_Rooftop.html"><img src="https://www.le-moon-rooftop.com/wp-content/uploads/2020/12/LMN-food-Dec-2020-71.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Le moon Rooftop</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">On the rooftop of the Amanjaya Pancam Hotel on riverside.</span>
+                                <span class="span-popular1">5:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="./page/Juniper_Gin.html"><img src="https://lh3.googleusercontent.com/p/AF1QipOToimVtxI_KtEQuiUGxAhsoOXf053LlUCGsqGF=s1360-w1360-h1020" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Juniper Gin</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Bar Rooftop with Cocktails and delicious food</span>
+                                <span class="span-popular1">4:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/Le_Moon_Rooftop.html"><img src="https://www.le-moon-rooftop.com/wp-content/uploads/2020/12/LMN-food-Dec-2020-71.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Le moon Rooftop</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">On the rooftop of the Amanjaya Pancam Hotel on riverside.</span>
+                                <span class="span-popular1">5:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Nearby Restaurant -->
+            <div class="nearby" id="category3">
+                <div class="restaurant-categories"><label>Nearby Restaurant</label><button class="see-more" id="see-more-3">see all</button><button id="seeless3" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant3">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/DavidsNoodle.html"><img src="./page/image/David/pic1.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">David's Noodle</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Best place in town for fresh noodle made with fresh vegetables and ingredients from market.</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Banh_Chhav_Ela.html"><img src="https://lh3.googleusercontent.com/p/AF1QipOFsyFAevH4dZCgRy2XJFQIbkUHDgs8J6TDmNK3=s1360-w1360-h1020" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Banh Chhav Ela Toul Kork</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy Breakfast,Lunch,Dinner with reasonable price and delicious</span>
+                                <span class="span-popular1">7:00am-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/FarmToTable.html"><img src="https://images.squarespace-cdn.com/content/v1/5c3a384f4cde7af56b4adfb4/1551494278209-96PE5P4YZO98NG4XRVU4/065A9617.jpeg?format=2500w" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Farm To Table</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">We providing healthy & sustainably produced dishes.</span>
+                                <span class="span-popular1">8:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Elevent_One.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/317942537_5580852605371520_1000996723649160744_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=fO68kjBa3t0AX9BmKX_&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfBBH2ltnrigT9-EU6YvjNzhMiH0DauZ--1OpRE--vug5A&oe=63A143F0" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Eleven One Kitchen</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Aim to offer fresh, healthy food at an affordable price.</span>
+                                <span class="span-popular1">7:00am-9:30pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Khema_La_Poste.html"><img src="https://khema-restaurant.com/wp-content/uploads/2022/11/khema-angkor-compressed.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Khéma La Poste</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular">Beautifully presented and served as always.</span>
+                                <span class="span-popular1">8:00am-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/restaurant1.html"><img src="https://mealeapalacegate.com/wp-content/uploads/2017/08/065A9868-600x400.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/restaurant1.html"><div class="name-restaurant">Mealea Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">We offer vegetarian, non-vegetarian and vegan cuisines.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/restaurant2.html"><img src="image/recomment restaurant assets/recom-2.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Malis Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">A high-end 'Living Cambodian Cuisine'.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/Emperors_China.html"><img src="https://i0.wp.com/emperorschina.com/wp-content/uploads/2018/07/eoc_4.jpg?resize=2000%2C1200&ssl=1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Emperors Of China</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Offer delicious specialty food </span>
+                                <span class="span-popular1">7:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <!--Buffet-->
+            <div class="buffet" id="category7">
+                <div class="restaurant-categories"><label>Buffet</label><button class="see-more" id="see-more-7">see all</button><button id="seeless7" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant7">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/FirstTimeBuffet.html"><img src="https://kohsantepheap.tv/wp-content/uploads/2021/01/8Q3A8942.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">First Time Buffet</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Good spread of food. Service is good. </span>
+                                <span class="span-popular1">4:00pm-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Hana_Buffet.html"><img src="https://lh3.googleusercontent.com/p/AF1QipNLj_q2gVBRI8kGDW5yFkt7HcIwGo8DYYloyeXi=s1360-w1360-h1020" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">HaNa Buffet BBQ&SukiSoup </div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular">Popular</span>
+                                <span class="span-popular1">11:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/LunchTimeBuffet.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t1.6435-9/87174016_780899262402494_6000691958215868416_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=xgNRA_8AzIcAX_tffeE&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfBa7ay5YnBbHu7PwCOG2V8aqEp0lirINAmOlHi8ifo5oA&oe=63C4B0D7" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Lunch Time Buffet</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Popular</span>
+                                <span class="span-popular1">10:00pm-2:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Oishi_Buffet.html"><img src="http://www.foodbuzz.site/wp-content/uploads/2016/10/14358814_1075725535816552_7111921409033867212_n.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Oishi Buffet Sukisoup & BBQ</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Popular</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Oishi_Buffet.html"><img src="http://www.foodbuzz.site/wp-content/uploads/2016/10/14358814_1075725535816552_7111921409033867212_n.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Oishi Buffet Sukisoup & BBQ</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Popular</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="./page/FirstTimeBuffet.html"><img src="image/recomment restaurant assets/recom-6.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">First Time Buffet</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">You can eat seafood, soup, BBQ as much as you want.</span>
+                                <span class="span-popular1">4:00pm-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/LunchTimeBuffet.html"><img src="data:image/jpeg;base64,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" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Lunch Time Buffet</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Popular</span>
+                                <span class="span-popular1">10:00pm-2:00pm</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/FirstTimeBuffet.html"><img src="https://kohsantepheap.tv/wp-content/uploads/2021/01/8Q3A8942.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">First Time Buffet BBQ & SukiSoup</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Good spread of food. Service is good. </span>
+                                <span class="span-popular1">4:00pm-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <!-- Breakfast,Lunch,Dinner Restaurant -->
+            <div class="BLDS" id="category4">
+                <div class="restaurant-categories"><label>Breakfast,Lunch,Dinner Served</label><button class="see-more" id="see-more-4">see all</button><button id="seeless4" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant4">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/DavidsNoodle.html"><img src="./page/image/David/pic1.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">David's Noodle</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Fresh noodle made with fresh vegetables.</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Banh_Chhav_Ela.html"><img src="https://lh3.googleusercontent.com/p/AF1QipOFsyFAevH4dZCgRy2XJFQIbkUHDgs8J6TDmNK3=s1360-w1360-h1020" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Banh Chhav Ela Toul Kork</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy Meal with reasonable price and delicious</span>
+                                <span class="span-popular1">7:00am-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/FarmToTable.html"><img src="https://images.squarespace-cdn.com/content/v1/5c3a384f4cde7af56b4adfb4/1551494278209-96PE5P4YZO98NG4XRVU4/065A9617.jpeg?format=2500w" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Farm To Table</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Providing healthy & sustainably produced dishes.</span>
+                                <span class="span-popular1">8:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Elevent_One.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/317942537_5580852605371520_1000996723649160744_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=fO68kjBa3t0AX9BmKX_&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfBBH2ltnrigT9-EU6YvjNzhMiH0DauZ--1OpRE--vug5A&oe=63A143F0" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a href="#"><div class="name-restaurant">Eleven One Kitchen</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Aim to offer fresh, healthy food at an affordable price.</span>
+                                <span class="span-popular1">7:00am-9:30pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Khema_La_Poste.html"><img src="https://khema-restaurant.com/wp-content/uploads/2022/11/khema-angkor-compressed.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Khéma La Poste</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular">Beautifully presented and served as always.</span>
+                                <span class="span-popular1">8:00am-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/restaurant1.html"><img src="https://mealeapalacegate.com/wp-content/uploads/2017/08/065A9868-600x400.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="page/restaurant1.html"><div class="name-restaurant">Mealea Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">We offer vegetarian, non-vegetarian and vegan cuisines.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/restaurant2.html"><img src="image/recomment restaurant assets/recom-2.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Malis Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">A high-end 'Living Cambodian Cuisine'.</span>
+                                <span class="span-popular1">6:30am-10:30pm</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/Emperors_China.html"><img src="https://i0.wp.com/emperorschina.com/wp-content/uploads/2018/07/eoc_4.jpg?resize=2000%2C1200&ssl=1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Emperors Of China</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Emperors of China offer delicious specialty food</span>
+                                <span class="span-popular1">7:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Fast Food -->
+            <div class="fast-food" id="category5">
+                <div class="restaurant-categories"><label>Fast Food</label><button class="see-more" id="see-more-5">see all</button><button id="seeless5" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant5">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/KFC.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/310084615_5829458107097387_4821581466043403620_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=c5n1g6Weq2QAX8J4wnv&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfC-7sfUz95_Fg-Y5kShiCyVJk2zC7o-Kvu0-fdNf-T-Ig&oe=63A1CB8C" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KFC Cambodia</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular"> American fast food restaurant chain headquartered</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Burger_Shack.html"><img src="./page/image/burgershack/pf.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Burgershack</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Explore our delicious menu at The Burger Shack</span>
+                                <span class="span-popular1">12:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/Carl'sJ.html"><img src="https://www.khmertimeskh.com/wp-content/uploads/2021/03/fn-2021-03-25-20-17-09-1.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Carl's Jr. Cambodia</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Carl's Jr burger outlet in Phnom Penh.</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Louisiana.html"><img src="https://www.foodbuzz.site/wp-content/uploads/2020/01/IMG_6875-1000x667.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Louisiana Famous Fried Chicken</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy eating fast food with good service and yummy chicken.</span>
+                                <span class="span-popular1">9:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Louisiana.html"><img src="https://www.foodbuzz.site/wp-content/uploads/2020/01/IMG_6875-1000x667.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Louisiana Famous Fried Chicken</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy eating fast food with good service and yummy chicken.</span>
+                                <span class="span-popular1">9:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/Carl'sJ.html"><img src="https://www.khmertimeskh.com/wp-content/uploads/2021/03/fn-2021-03-25-20-17-09-1.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Carl's Jr. Cambodia</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Carl's Jr burger outlet in Phnom Penh.</span>
+                                <span class="span-popular1">10:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/Burger_Shack.html"><img src="./page/image/burgershack/pf.jpg" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Burgershack</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Explore our delicious menu at The Burger Shack!</span>
+                                <span class="span-popular1">12:00pm-12:00am</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/KFC.html"><img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/310084615_5829458107097387_4821581466043403620_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=c5n1g6Weq2QAX8J4wnv&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&oh=00_AfC-7sfUz95_Fg-Y5kShiCyVJk2zC7o-Kvu0-fdNf-T-Ig&oe=63A1CB8C" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KFC Cambodia</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                </div>
+                                <span class="span-popular"> American fast food restaurant chain headquartered</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Chinese Restaurant -->
+            <div class="chinese" id="category6">
+                <div class="restaurant-categories"><label>Chinese and Japanese Restaurant</label><button class="see-more" id="see-more-6">see all</button><button id="seeless6" class="see-less" style="display:none;">see less</button></div>
+                <br>
+                <div class="restaurants restaurant6">
+                    <div>
+                        <div class="recom menu-1">
+                            <a href="page/Emperors_China.html"><img src="https://i0.wp.com/emperorschina.com/wp-content/uploads/2018/07/eoc_4.jpg?resize=2000%2C1200&ssl=1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Emperors Of China</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Emperors of China offer delicious specialty food.</span>
+                                <span class="span-popular1">7:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-2">
+                            <a href="page/Iza_Japanese.html"><img src="https://images.rosewoodhotels.com/is/image/rwhg/rwppn-iza-dish:SQUARE-LARGE-1-1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant"> IZA Japanese Restaurant </div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <span class="span-popular">A Japanese Izakaya-style dining space.</span>
+                                <span class="span-popular1">12:00pm-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-3">
+                            <a href="page/Kyowagyuomakase.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/298512865_152773617358833_6782732766496118826_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=21EHr44KIlIAX9ki3T5&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAd6OjnY8wAjCMFER7R5iUzCkV2tPBUdoR9fuk2AJ5GBQ&oe=63A197AE" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KYŌ Wagyu Omakase</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <span class="span-popular">a Japanese fine dining fuse traditional Japanese</span>
+                                <span class="span-popular1">12:00pm-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-4">
+                            <a href="page/Zhan_Liang_Chinese.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/316678544_851606666276220_2470523915780435248_n.jpg?stp=dst-jpg_p960x960&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=DKCJge69JdoAX_KKh0O&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfD6nPfhTmuhZHo-jiO-Eu1IGoqxdkzy6Gi0M1pTiLrmdw&oe=63A36C4D" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Zhan Liang Chinese Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy a contemporary Chinese dining experience.</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div> 
+                    <div>
+                        <div class="recom menu-5">
+                            <a href="page/Zhan_Liang_Chinese.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/316678544_851606666276220_2470523915780435248_n.jpg?stp=dst-jpg_p960x960&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=DKCJge69JdoAX_KKh0O&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfD6nPfhTmuhZHo-jiO-Eu1IGoqxdkzy6Gi0M1pTiLrmdw&oe=63A36C4D" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Zhan Liang Chinese Restaurant</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-o checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Enjoy a contemporary Chinese dining experience.</span>
+                                <span class="span-popular1">9:00am-9:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-6">
+                            <a href="page/Kyowagyuomakase.html"><img src="https://scontent.fpnh8-2.fna.fbcdn.net/v/t39.30808-6/298512865_152773617358833_6782732766496118826_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=21EHr44KIlIAX9ki3T5&_nc_zt=23&_nc_ht=scontent.fpnh8-2.fna&oh=00_AfAd6OjnY8wAjCMFER7R5iUzCkV2tPBUdoR9fuk2AJ5GBQ&oe=63A197AE" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">KYŌ Wagyu Omakase</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <span class="span-popular">a Japanese fine dining fuse traditional Japanese style</span>
+                                <span class="span-popular1">12:00pm-8:00pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="recom menu-7">
+                            <a href="page/Emperors_China.html"><img src="https://i0.wp.com/emperorschina.com/wp-content/uploads/2018/07/eoc_4.jpg?resize=2000%2C1200&ssl=1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant">Emperors Of China</div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <span class="span-popular">Emperors of China offer delicious specialty food</span>
+                                <span class="span-popular1">7:00am-10:00pm</span>                   
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div>
+                        <div class="recom menu-8">
+                            <a href="page/Iza_Japanese.html"><img src="https://images.rosewoodhotels.com/is/image/rwhg/rwppn-iza-dish:SQUARE-LARGE-1-1" alt=""></a>
+                            <div class="res-title-and-status">
+                                <a class="link_res" href="#"><div class="name-restaurant"> IZA Japanese Restaurant </div><br><br></a>
+                                <span class="span-popular2 open">Open</span>
+                                <span class="span-popular2 close" style="display: none;">Close</span>
+                            </div>
+                            <div class="footer-menu">
+                                <div class="ratingStar">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <span class="span-popular">A Japanese Izakaya-style dining space.</span>
+                                <span class="span-popular1">12:00pm-10:30pm</span>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="clear"></div>
+                <div class="clear"></div>
+            </div>
+            <!-- <script language="Javascript" type="text/Javascript">
+                function mousehover()
+                {
+                    alert("This is JavaTpoint");
+                }
+            </script> -->
+        </div>
+        <div style="margin-left: auto; margin-right: 1rem;margin-top: -5rem;"><a href="#for-back"><img src="image/traingle.png" alt="" width="35px"></a></div>
+        <div id="footer">
+                <div class="left">
+                    <img src="image/logo.png" alt="logo">
+                    <h3>Follow us:</h3>
+                    <div class="social-media">
+                        <a href="aboutUs.html" class="fa fa-facebook-square" aria-hidden="true"></a>
+                        <a href="aboutUs.html" class="fa fa-instagram" aria-hidden="true"></a>
+                        <a href="aboutUs.html" class="fa fa-twitter-square" aria-hidden="true"></a>
+                        <a href="aboutUs.html"class="fa fa-telegram" aria-hidden="true"></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="aboutUs.html" class="other">Privacy Policy</a>
+                    <a href="aboutUs.html" class="other">Terms & Conditions </a>
+                    <a href="aboutUs.html" class="other">Contact Us</a>
+                    <a href="aboutUs.html" class="other">Feedback</a>            
+                </div>    
+        </div>
+        <!-- <script src="js/showML.js"></script>
+        <script src="js/showML2.js"></script>
+        <script src="js/showML3.js"></script>
+        <script src="js/showML4.js"></script>
+        <script src="js/showML5.js"></script>
+        <script src="js/showML6.js"></script> -->
+        
+    </div>
+    <div class="orangebar"></div>
+    
+    <script src="js/windowScroll.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/see-all.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/restaurantData.js"></script>
+</body>
+</html>
