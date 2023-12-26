@@ -31,9 +31,9 @@ export default memo(function BrowseJob() {
 
     useEffect(() => {
         if(Object.keys(allPost).length == 0){
-            axiosClient.get('/search')
+            axiosClient.get('/browse')
             .then(({data}) => {
-                setPost(data);
+                setPost(data.posts);
                 setLoading(false);
             })
             .catch(e => {console.log(e); setLoading(false)});
